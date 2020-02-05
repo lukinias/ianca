@@ -5,7 +5,7 @@
         <meta name="description" content="Unica University Template">
       	<meta name="keywords" content="event, unica, creative, html">
       	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}IANCA - Instituto Argentino de Negociación, Conciliación y Arbitraje{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
@@ -31,7 +31,7 @@
       	<header class="header-section">
       		<div class="container">
       			<!-- logo -->
-      			<a href="index.html" class="site-logo"><img src="img/logo-ianca.jpg" alt="Instituto Argentino de Negociación, Conciliación y Arbitraje" title="Instituto Argentino de Negociación, Conciliación y Arbitraje"><br><span class="ianca">IANCA - Instituto Argentino de<br>Negociación, Conciliación y Arbitraje</span></a>
+      			<a href="index.html" class="site-logo"><img src="{{ asset('img/logo-ianca.jpg') }}" alt="Instituto Argentino de Negociación, Conciliación y Arbitraje" title="Instituto Argentino de Negociación, Conciliación y Arbitraje"><br><span class="ianca">IANCA - Instituto Argentino de<br>Negociación, Conciliación y Arbitraje</span></a>
       			<div class="nav-switch">
       				<i class="fa fa-bars"></i>
       			</div>
@@ -59,13 +59,13 @@
       				<a href=""><i class="fa fa-shopping-cart"></i></a-->
       			</div>
       			<ul class="main-menu">
-      				<li class="active"><a href="/">Inicio</a></li>
-              <li><a href="capacitacion.html">Capacitación</a></li>
-              <li><a href="about.html">Quienes somos</a></li>
+      				<li class="active"><a href="{{ path('homepage') }}">Inicio</a></li>
+                    <li><a href="capacitacion.html">Capacitación</a></li>
+                    <li><a href="about.html">Quienes somos</a></li>
       				<li><a href="normativa.html">Normativa</a></li>
       				<li><a href="publicaciones.html">Publicaciones</a></li>
       				<li><a href="clausulas-compromisorias.html">Cláusulas compromisorias</a></li>
-              <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="{{ path('contact') }}">Contacto</a></li>
       			</ul>
       		</div>
       	</nav>
@@ -81,7 +81,7 @@
       				<!-- widget -->
       				<div class="col-sm-6 col-lg-3 footer-widget">
       					<div class="about-widget">
-      						<img src="img/logo-ianca.jpg" alt="">
+      						<img src="{{ asset('img/logo-ianca.jpg') }}" alt="">
       					</div>
       				</div>
       				<!-- widget -->
