@@ -17,10 +17,50 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/contacto", name="contact")
+     * @Route("/contacto", name="contacto")
      */
-    public function contactAction(Request $request)
+    public function contactoAction(Request $request)
     {
-        return $this->render('default/contact.html.twig');
+        return $this->render('default/contacto.html.twig');
+    }
+
+    /**
+     * @Route("/clausulas-compromisorias", name="clausulas-compromisorias")
+     */
+    public function clausulasCompromisoriasAction(Request $request)
+    {
+        return $this->render('default/clausulas-compromisorias.html.twig');
+    }
+
+    /**
+     * @Route("/registro-mediadores-conciliadores", name="registro-mediadores-conciliadores")
+     */
+    public function registroMediadoresConciliadoresAction(Request $request)
+    {
+        return $this->render('default/registro-mediadores-conciliadores.html.twig');
+    }
+
+    /**
+     * @Route("/registro-arbitros", name="registro-arbitros")
+     */
+    public function registroArbitrosAction(Request $request)
+    {
+        return $this->render('default/registro-arbitros.html.twig');
+    }
+
+    /**
+     * @Route("/resolucion-480", name="resolucion-480")
+     */
+    public function resolucion480Action(Request $request)
+    {
+        return $this->render('default/resolucion-480.html.twig');
+    }
+
+    /**
+     * @Route("/registro-profesional", name="registro-profesional")
+     */
+    public function registrorPofesionalAction(Request $request)
+    {
+        return $this->render('default/registro-profesional.html.twig');
     }
 }
