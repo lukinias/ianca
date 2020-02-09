@@ -1,0 +1,464 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Actividades section -->
+	<section class="about-section spad pt-0">
+		<div class="container">
+			<div class="section-title text-center">
+				<h3>Actividades</h3>
+			</div>
+			<div class="row">
+				<div class="col-lg-16 about-text">
+					<table border="1" cellspacing="2" cellpadding="5" style="font-family: 'Rubik', sans-serif;">
+						<tr>
+							<th style="background-color:LightGrey;width:50%" rowspan="2"> Actividades </th>
+							<th style="background-color:LightGrey" colspan="3"> Cursos Oficiales </th>
+							<th style="background-color:LightGrey" rowspan="2"> Horas </th>
+						</tr>
+						<tr>
+							<th style="background-color:LightGrey"> Ministerio de Justicia Nación </th>
+							<th style="background-color:LightGrey"> Ministerio Educación (CABA) </th>
+							<th style="background-color:LightGrey"> CUIDI </th>
+						</tr>
+
+                        {% for curso in cursosArray %}
+                            {% if curso.activo == 1 %}
+                                <tr>
+                                    <td><a href="#">{{ curso.nombre }}</a></td>
+                                    <td>{% if curso.mjn != null %}{{curso.mjn}} certificado{% if curso.mjn > 1 %}s{% endif %}{% endif %}</td>
+                                    <td>{% if curso.mecaba != null %}{{curso.mecaba}} título{% if curso.mecaba > 1 %}s{% endif %} opcional{% if curso.mecaba > 1 %}es{% endif %}{% endif %}</td>
+                                    <td>{% if curso.cuidi != null %}Certificado{% endif %}</td>
+                                    <td>{{ curso.horas }}</td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+
+
+
+
+
+						<!--tr>
+							<td><a href="Postgra.htm">Curso de Postgrado de Gestión y Administración de Conflictos</a></td>
+							<td>8 certificados</td>
+							<td><a href="ProyectosAprob.htm">3 Títulos opcionales</a></td>
+							<td>Certificado</td>
+							<td>252</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="cursos.htm">Mediador</a> <font size="3"><sup>1</sup></font>
+								(<a href="cursmedi.htm">Curso Introductorio</a>, <a href="cursmedi2.htm">Teórico Práctico Avanzado</a> y
+								<a href="cursmedi3.htm">Pasantías</a>)
+							</td>
+							<td>3 certificados</td>
+							<td><a href="ProyectosAprob.htm">1 Título opcional</a></td>
+							<td>&nbsp;</td>
+							<td>100</td>
+						</tr>
+						<tr>
+							<td><a href="CicloNego.htm">Curso de Postgrado en Ciclo de Especialización en Negociación</a></td>
+							<td>9 Certificados</td>
+							<td><a href="ProyectosAprob.htm">1 Título Opcional</a></td>
+							<td>Certificado</td>
+							<td>180</td>
+						</tr>
+						<tr>
+							<td><a href="ArbitrajeLaboral.htm">Arbitraje en Conflictos Individuales de Trabajo</a></td>
+							<td>1 Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Diplomado en Mediación Familiar Humanística</td>
+							<td>5 Certificados</td>
+							<td>&nbsp;</td>
+							<td>Certificado</td>
+							<td>152</td>
+						</tr>
+						<tr>
+							<td><a href="cursoMedFliar.htm">Mediación Especializada en Familia</a></td>
+							<td>8 Certificados</td>
+							<td><a href="ProyectosAprob.htm">4 </a><a href="ProyectosAprob.htm">Títulos</a> <a href="ProyectosAprob.htm">opcionales</a></td>
+							<td>&nbsp;</td>
+							<td>150</td>
+						</tr>
+						<tr>
+							<td>Formación en Mediación <font size="3"><sup>2</sup></font></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>Certificado</td>
+							<td>84</td>
+						</tr>
+						<tr>
+							<td>Formación en Mediación <font size="3"><sup>3</sup></font></td>
+							<td>3 certificados opcionales</td>
+							<td><a href="ProyectosAprob.htm">1 Título</a></td>
+							<td>&nbsp;</td>
+							<td>100</td>
+						</tr>
+						<tr>
+							<td><a href="ConsumoCABA.docx">Relaciones de Consumo</a></td>
+							<td>&nbsp;</td>
+							<td>En trámite</td>
+							<td>&nbsp;</td>
+							<td>50</td>
+						</tr>
+						<tr>
+							<td><a href="cursnege.htm">Teoría y Técnica de la Negociación</a><font size="3"><sup>1</sup></font></td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Comunicación, Conflicto y Mediación<font size="3"><sup>1</sup></font></td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Información y Decisiones en la Negociación <font size="3"><sup>1</sup></font></td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Aspectos Particulares de la Terciación <font size="3"><sup>1</sup></font></td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td><a href="cursoMedProb.htm">Mediación en el Proceso de "Probation"</a></td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td><a href="cursoCreatividad.htm">Creatividad para Terciación</a> <font size="3"><sup>1</sup></font></td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Teoría de la Decisión<font size="3"><sup>1</sup></font></td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td><a href="cursoArb.htm">Arbitraje General</a></td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>18</td>
+						</tr>
+						<tr>
+							<td><a href="cursoViolencia.htm">Violencia y Mediación</a><font size="3"><sup>1</sup></font></td>
+							<td>3 Certificados</td>
+							<td><a href="ProyectosAprob.htm">1 Título</a></td>
+							<td>&nbsp;</td>
+							<td>70</td>
+						</tr>
+						<tr>
+							<td><a href="cursnege.htm">Negociación</a> <font size="3"><sup>3</sup></font></td>
+							<td>&nbsp;</td>
+							<td><a href="ProyectosAprob.htm">1 Título</a></td>
+							<td>&nbsp;</td>
+							<td>50</td>
+						</tr>
+						<tr>
+							<td><a href="cursredcostos.htm">Reducción de Costos</a></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>Certificado</td>
+							<td>36</td>
+						</tr>
+						<tr>
+							<td><a href="SemiNegCrisis.docx">Seminario Negociación en Crisis</a></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>Certificado</td>
+							<td>120</td>
+
+						</tr>
+						<tr>
+							<td><a href="cursoCrisisFin.htm">Administración de Conflicto en Crisis Financiera-Económica. Abordaje efectivo</a></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>Certificado</td>
+							<td>40</td>
+						</tr>
+						<tr>
+							<td><a href="cursoINTERESES.htm">Costos Financieros en épocas de crisis. Optimización de costos y salvataje organizacional</a></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>Certificado</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td><a href="cursecuestro.htm">Secuestros y Toma de Rehenes</a></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>Certificado</td>
+							<td>30</td>
+						</tr>
+						<tr>
+							<td>Ciclo de Especialización en Mediación para la Pacificación Social</td>
+							<td>6 certificados</td>
+							<td><a href="ProyectosAprob.htm">2 Títulos opcionales</a></td>
+							<td>&nbsp;</td>
+							<td>164</td>
+						</tr>
+						<tr>
+							<td>Conciliación Laboral</td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>60</td>
+						</tr>
+						<tr>
+							<td>Conciliación Laboral para Mediadores</td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Mediación Educativa</td>
+							<td>3 certificados</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>86</td>
+						</tr>
+						<tr>
+							<td>Mediación y Conflicto Familiar</td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Consejero en Gestión y Administración de Conflictos</td>
+							<td>&nbsp;</td>
+							<td><a href="ProyectosAprob.htm">1 Título</a></td>
+							<td>&nbsp;</td>
+							<td>150</td>
+						</tr>
+						<tr>
+							<td>Formación de Oficiales de Prueba y Consejero en Inserción Social</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>90</td>
+						</tr>
+						<tr>
+							<td>Curso de Postgrado en Problemáticas Infanto Juveniles</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>252</td>
+						</tr>
+						<tr>
+							<td>Consejero en Administración y Gestión de Conflictos</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Aspectos Patrimoniales en la Administración de Conflictos</td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Aspectos Psicosociales</td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Conciliación Laboral</td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Negociación y Mediación en Niñez y Adolescencia</td>
+							<td>Certificado</td>
+							<td><a href="ProyectosAprob.htm">1 Título</a></td>
+							<td>&nbsp;</td>
+							<td>36</td>
+						</tr>
+						<tr>
+							<td>Consejero en la Red Comunitaria para la Administración de Conflictos - Mediador Comunitario</td>
+							<td>Certificado<p>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Recuperación de la Víctima de la Violencia</td>
+							<td>Certificado</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>10</td>
+						</tr>
+						<tr>
+							<td>Negociación en situaciones de Crisis: toma de rehenes, Parapetamientos, Motines, Piquetes, Potenciales suicidios, Autoresguardo, Seguridad ante el delito sin violencia</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>Certificado</td>
+							<td>30</td>
+						</tr>
+						<tr>
+							<td>Calidad de vida: Método IRECA</td>
+							<td>&nbsp;</td>
+							<td><a href="ProyectosAprob.htm">1 Título</a></td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>Técnicas de Formación para Formadores, Docentes</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>20</td>
+						</tr-->
+
+
+
+
+
+
+					</table>
+
+					<br>
+					<p><b>Aclaraciones:</b>
+					<br>Todas las actividades son presenciales.</p>
+					<ol class="about-list" style="font-size:12px;margin-left:20px">
+						<li>
+				            Es una de las materias integrantes del Curso de Postgrado de Gestión y Administración de Conflictos.
+				        </li>
+						<li>
+				            Completando horas de presencia física obtiene el título de Mediador Oficial.
+				        </li>
+						<li>
+				            Asigna puntaje docente, el certificado se entrega legalizado en el Ministerio de Educación de la Ciudad de Buenos Aires y por el Ministerio del Interior Nacional y puede apostillarse en el Ministerio de Relaciones Exteriores Nacional.
+				        </li>
+						<li>
+				            Presencia física y presencia virtual sincrónica o asincrónica (a demanda).
+				        </li>
+						<li>
+				            Da equivalencias para presencia física.
+				        </li>
+					</ol>
+					<hr>
+					<br>
+					<h5>Certificación oficial</h5>
+					<p>El <b>IANCA</b> se encuentra autorizado para el dictado de actividades de formación, perfeccionamiento y actualización ante:</p>
+					<ul class="about-list" style="margin-left:20px">
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				            Ministerio de Justicia y Derechos Humanos de la Nación, Dirección de Mediación y de Promoción de Métodos Participativos de Justicia, para Mediadores y Conciliadores, con el Número 1 de Entidad Formadora (Disposición Número 4 de 1.998). Nivel Universitario y Certificados oficiales)
+				        </li>
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				            Gobierno de la Ciudad de Buenos Aires, Ministerio de Educación. Dirección General de Educación de Gestión Privada, Registro “C” Número 457 de Institutos Privados de Perfeccionamiento Docente. Nivel Terciario y Certificados Oficiales.
+				        </li>
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				            Gobierno de la Provincia de Buenos Aires, Dirección General de Cultura y Educación, Red Federal de Formación Docente Continua, Registro de Instituciones Oferentes, Número de Acreditación d2 - 0000 82. Nivel Terciario.
+				        </li>
+					</ul>
+					<hr>
+					<br>
+					<h5>Consultas IANCA:</h5>
+					<ul class="about-list" style="margin-left:20px">
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				             Fragata Presidente Sarmiento 46, Ciudad Autónoma de Buenos Aires.
+				        </li>
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				            Teléfono (54 11) 2054-1499
+				        </li>
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				            Horario de atención: 10 a 18 horas de lunes a viernes.
+				        </li>
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				            E-Mail: info@ianca.com.ar
+				        </li>
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				            Sitio Web: <a href="http://www.iancanegocyar.com.ar">http://www.iancanegocyar.com.ar</a>
+				        </li>
+					</ul>
+					<hr>
+					<br>
+					<h5>Cursos NO Programados</h5>
+					Para aquellas personas u organizaciones que deseen realizar actividades que no están programadas entre las publicadas o que les resulte imposible asistir existen las siguientes posibilidades:
+					<ul class="about-list" style="margin-left:20px">
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				             Inscribirse en listas del IANCA a los fines de cubrir los cupos mínimos que justifiquen la realización de la actividad, enviando e-mail a info@ianca.com.ar
+				        </li>
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				            Armando grupos con un mínimo de 12 personas.
+				        </li>
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				            Dictado especial para organizaciones con programas adaptados a sus requerimientos.
+				        </li>
+					</ul>
+					<hr>
+					<br>
+					<h5>Detalle de cursos por temática:</h5>
+					<ul class="about-list" style="margin-left:20px">
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				             Autorresguargo y Seguridad Personal (Asaltos, toma de rehenes, secuestros, etcétera)
+				        </li>
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				            Mediación, Conciliación y Arbitraje (Administración  y resolución de conflictos)
+				        </li>
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				            Negociación Comercial, Familiar, Financiera, Comunitaria, Laboral
+				        </li>
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				            Probatión y Delictiva
+				        </li>
+						<li>
+				            <i class="fa fa-check-square-o"></i>
+				            Miscelenias (Varios, Económicos y Financieros)
+				        </li>
+					</ul>
+					<hr>
+					<br>
+					<p>Cada una de las asignaturas, o el curso de postgrado, puede ser dictado en exclusividad para el personal de organizaciones o los matriculados profesionales, adaptándose a las necesidades específicas del grupo, tales como los objetivos a alcanzar, profundización de ciertos temas, horarios, lugar, etcétera.
+					<br>
+					<br>
+					<a href="{{ path('contacto') }}">Contáctese</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Actividades section end-->
+{% endblock %}

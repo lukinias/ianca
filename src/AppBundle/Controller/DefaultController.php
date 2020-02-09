@@ -13,7 +13,9 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return $this->render('default/index.html.twig');
+        return $this->render('default/index.html.twig', array(
+            'active_menu' => '1'
+        ));
     }
 
     /**
@@ -21,7 +23,9 @@ class DefaultController extends Controller
      */
     public function contactoAction(Request $request)
     {
-        return $this->render('default/contacto.html.twig');
+        return $this->render('default/contacto.html.twig', array(
+            'active_menu' => '7'
+        ));
     }
 
     /**
@@ -29,7 +33,9 @@ class DefaultController extends Controller
      */
     public function clausulasCompromisoriasAction(Request $request)
     {
-        return $this->render('default/clausulas-compromisorias.html.twig');
+        return $this->render('default/clausulas-compromisorias.html.twig', array(
+            'active_menu' => '6'
+        ));
     }
 
     /**
@@ -37,7 +43,9 @@ class DefaultController extends Controller
      */
     public function registroMediadoresConciliadoresAction(Request $request)
     {
-        return $this->render('default/registro-mediadores-conciliadores.html.twig');
+        return $this->render('default/registro-mediadores-conciliadores.html.twig', array(
+            'active_menu' => '6'
+        ));
     }
 
     /**
@@ -45,7 +53,9 @@ class DefaultController extends Controller
      */
     public function registroArbitrosAction(Request $request)
     {
-        return $this->render('default/registro-arbitros.html.twig');
+        return $this->render('default/registro-arbitros.html.twig', array(
+            'active_menu' => '6'
+        ));
     }
 
     /**
@@ -53,7 +63,9 @@ class DefaultController extends Controller
      */
     public function resolucion480Action(Request $request)
     {
-        return $this->render('default/resolucion-480.html.twig');
+        return $this->render('default/resolucion-480.html.twig', array(
+            'active_menu' => '6'
+        ));
     }
 
     /**
@@ -61,6 +73,8 @@ class DefaultController extends Controller
      */
     public function registrorPofesionalAction(Request $request)
     {
-        return $this->render('default/registro-profesional.html.twig');
+        return $this->render('default/registro-profesional.html.twig', array(
+            'active_menu' => '6'
+        ));
     }
 }

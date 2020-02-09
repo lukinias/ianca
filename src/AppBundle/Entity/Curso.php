@@ -63,6 +63,13 @@ class Curso
      */
     private $cuidi;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="activo", type="boolean", nullable=false)
+     */
+    private $activo='1';
+
 
     /**
      * Get id
@@ -217,5 +224,28 @@ class Curso
     {
         return $this->cuidi;
     }
-}
 
+    /**
+     * Set activo
+     *
+     * @param boolean $activo
+     *
+     * @return Curso
+     */
+    public function setActivo($activo)
+    {
+        $this->activo = $activo;
+
+        return $this;
+    }
+
+    /**
+     * Get activo
+     *
+     * @return boolean
+     */
+    public function getActivo()
+    {
+        return $this->activo;
+    }
+}

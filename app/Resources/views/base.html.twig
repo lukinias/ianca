@@ -31,7 +31,7 @@
       	<header class="header-section">
       		<div class="container">
       			<!-- logo -->
-      			<a href="index.html" class="site-logo"><img src="{{ asset('img/logo-ianca.jpg') }}" alt="Instituto Argentino de Negociación, Conciliación y Arbitraje" title="Instituto Argentino de Negociación, Conciliación y Arbitraje"><br><span class="ianca">IANCA - Instituto Argentino de<br>Negociación, Conciliación y Arbitraje</span></a>
+      			<a href="{{ path('homepage') }}" class="site-logo"><img src="{{ asset('img/logo-ianca.jpg') }}" alt="Instituto Argentino de Negociación, Conciliación y Arbitraje" title="Instituto Argentino de Negociación, Conciliación y Arbitraje"><br><span class="ianca">IANCA - Instituto Argentino de<br>Negociación, Conciliación y Arbitraje</span></a>
       			<div class="nav-switch">
       				<i class="fa fa-bars"></i>
       			</div>
@@ -59,18 +59,18 @@
       				<a href=""><i class="fa fa-shopping-cart"></i></a-->
       			</div>
       			<ul class="main-menu">
-      				<li {% if path(app.request.attributes.get('_route')) == '/' %}class="active"{% endif %}><a href="{{ path('homepage') }}">Inicio</a></li>
-                    <li><a href="capacitacion.html">Capacitación</a></li>
-                    <li><a href="about.html">Quienes somos</a></li>
-      				<li><a href="normativa.html">Normativa</a></li>
-      				<li><a href="publicaciones.html">Publicaciones</a></li>
-      				<li {% if path(app.request.attributes.get('_route')) == '/clausulas-compromisorias' %}class="active"{% endif %}><a href="{{ path('clausulas-compromisorias') }}">Cláusulas compromisorias</a></li>
-                    <li {% if path(app.request.attributes.get('_route')) == '/contacto' %}class="active"{% endif %}><a href="{{ path('contacto') }}">Contacto</a></li>
+      				<li {% if active_menu == '1' %}class="active"{% endif %}><a href="{{ path('homepage') }}">Inicio</a></li>
+                    <li {% if active_menu == '2' %}class="active"{% endif %}><a href="{{ path('cursos') }}">Capacitación</a></li>
+                    <li {% if active_menu == '3' %}class="active"{% endif %}><a href="about.html">Quienes somos</a></li>
+      				<li {% if active_menu == '4' %}class="active"{% endif %}><a href="normativa.html">Normativa</a></li>
+      				<li {% if active_menu == '5' %}class="active"{% endif %}><a href="publicaciones.html">Publicaciones</a></li>
+      				<li {% if active_menu == '6' %}class="active"{% endif %}><a href="{{ path('clausulas-compromisorias') }}">Cláusulas compromisorias</a></li>
+                    <li {% if active_menu == '7' %}class="active"{% endif %}><a href="{{ path('contacto') }}">Contacto</a></li>
       			</ul>
       		</div>
       	</nav>
-        
-        <br><br>
+
+        <br>
         <!-- Header section end -->
 
         {% block body %}{% endblock %}
