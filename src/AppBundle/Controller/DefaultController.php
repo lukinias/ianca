@@ -77,4 +77,14 @@ class DefaultController extends Controller
             'active_menu' => '6'
         ));
     }
+
+    /**
+     * @Route("/quienes-somos", name="quienes-somos")
+     */
+    public function quienesSomosAction(Request $request)
+    {
+        return $this->render('default/quienes-somos.html.twig', array(
+            'active_menu' => '3'
+        ));
+    }
 }

@@ -61,16 +61,16 @@
       			<ul class="main-menu">
       				<li {% if active_menu == '1' %}class="active"{% endif %}><a href="{{ path('homepage') }}">Inicio</a></li>
                     <li {% if active_menu == '2' %}class="active"{% endif %}><a href="{{ path('cursos') }}">Capacitación</a></li>
-                    <li {% if active_menu == '3' %}class="active"{% endif %}><a href="about.html">Quienes somos</a></li>
+                    <li {% if active_menu == '3' %}class="active"{% endif %}><a href="{{ path('quienes-somos') }}">Quienes somos</a></li>
       				<li {% if active_menu == '4' %}class="active"{% endif %}><a href="normativa.html">Normativa</a></li>
-      				<li {% if active_menu == '5' %}class="active"{% endif %}><a href="publicaciones.html">Publicaciones</a></li>
+      				<li {% if active_menu == '5' %}class="active"{% endif %}><a href="{{ path('publicaciones') }}">Publicaciones</a></li>
       				<li {% if active_menu == '6' %}class="active"{% endif %}><a href="{{ path('clausulas-compromisorias') }}">Cláusulas compromisorias</a></li>
                     <li {% if active_menu == '7' %}class="active"{% endif %}><a href="{{ path('contacto') }}">Contacto</a></li>
       			</ul>
       		</div>
       	</nav>
 
-        <br>
+        <br><br>
         <!-- Header section end -->
 
         {% block body %}{% endblock %}

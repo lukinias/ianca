@@ -66,7 +66,7 @@ class Curso
     /**
      * @var boolean
      *
-     * @ORM\Column(name="activo", type="boolean", nullable=false)
+     * @ORM\Column(name="activo", type="boolean", nullable=false, options={"default":1})
      */
     private $activo='1';
 

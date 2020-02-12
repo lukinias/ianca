@@ -2,7 +2,7 @@
 ------------------------------------
 	Unica - University Template
 	Version: 1.0
- ------------------------------------ 
+ ------------------------------------
  ====================================*/
 
 
@@ -16,8 +16,9 @@ $(window).on('load', function() {
 	/*------------------
 		Preloder
 	--------------------*/
-	$(".loader").fadeOut(); 
+	$(".loader").fadeOut();
 	$("#preloder").delay(400).fadeOut("slow");
+	initializeGoTopFAB();
 
 });
 
@@ -40,7 +41,7 @@ $(window).on('load', function() {
 		$(this).css('background-image', 'url(' + bg + ')');
 	});
 
-	
+
 	/*------------------
 		Hero Slider
 	--------------------*/
@@ -78,7 +79,7 @@ $(window).on('load', function() {
 	$('.gallery').find('.gallery-item').each(function() {
 		var pi_height1 = $(this).width(),
 		pi_height2 = pi_height1/2;
-		
+
 		if($(this).hasClass('gi-long') && window_w > 991){
 			$(this).css('height', pi_height2);
 		}else{
@@ -90,7 +91,7 @@ $(window).on('load', function() {
 		itemSelector: '.gallery-item',
 		columnWidth: '.grid-sizer'
 	});
-	
+
 
 
 	/*------------------
@@ -106,7 +107,7 @@ $(window).on('load', function() {
 		items: 1,
 		autoplay: true
 	});
-	
+
 
 
 	/*------------------
@@ -122,3 +123,13 @@ $(window).on('load', function() {
 
 })(jQuery);
 
+function initializeGoTopFAB() {
+   var FAB = $("<div class='fab'><span></span></div>");
+
+   FAB.on("click", function(ev) {
+		var body = $("html, body");
+		body.stop().animate({scrollTop:0}, 500, 'swing');
+   })
+
+   $("body").append(FAB);
+}
