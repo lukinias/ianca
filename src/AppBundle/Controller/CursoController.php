@@ -22,4 +22,22 @@ class CursoController extends Controller
              'cursosArray' => $cursos
          ));
      }
+
+     /**
+      * @Route("/curso/{id}", name="curso")
+      */
+      public function cursoAction(Request $request, $id=null)
+      {
+          if ( $id != null ) {
+              $cursoRepository = $this->getDoctrine()->getRepository(Curso::class);
+              $curso = $cursoRepository->find($id);
+
+              return $this->render('curso/curso.html.twig', array(
+                  'active_menu' => '2',
+                  'curso' => $curso
+              ));
+          } else {
+              return $this->redirectToRoute('cursos');
+          }
+      }
 }

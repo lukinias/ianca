@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Detalle de publicación section -->
+    <section class="about-section spad pt-0">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>{{ publicacion.obra }}</h3>
+                <p><u>Autores:</u> {{ publicacion.autores }}</p>
+                <a href="{{ publicacion.link }}" target="_blank">
+                    <div class="site-btn center" style="margin-top:30px;">OBTENER</div>
+                </a>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 about-text">
+                    <h5>Descripción</h5>
+                    <p>{{ publicacion.descripcionLarga }}</p>
+                </div>
+                <div class="col-lg-6 pt-5 pt-lg-0">
+                    <img src="{{ asset('img/publicacion/') }}{{ publicacion.imagen }}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Detalle de publicación section end-->
+{% endblock %}

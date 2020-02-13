@@ -31,7 +31,7 @@ class Publicacion
     /**
      * @var string
      *
-     * @ORM\Column(name="descripcion_corta", type="string", length=50)
+     * @ORM\Column(name="descripcion_corta", type="string", length=250)
      */
     private $descripcionCorta;
 

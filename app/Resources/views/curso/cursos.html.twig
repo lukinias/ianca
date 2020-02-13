@@ -24,7 +24,7 @@
                         {% for curso in cursosArray %}
                             {% if curso.activo == 1 %}
                                 <tr>
-                                    <td><a href="#">{{ curso.nombre }}</a></td>
+                                    <td><a href="{{ path('curso', {'id':curso.id}) }}">{{ curso.nombre }}</a></td>
                                     <td>{% if curso.mjn != null %}{{curso.mjn}} certificado{% if curso.mjn > 1 %}s{% endif %}{% endif %}</td>
                                     <td>{% if curso.mecaba != null %}{{curso.mecaba}} título{% if curso.mecaba > 1 %}s{% endif %} opcional{% if curso.mecaba > 1 %}es{% endif %}{% endif %}</td>
                                     <td>{% if curso.cuidi != null %}Certificado{% endif %}</td>
@@ -32,6 +32,11 @@
                                 </tr>
                             {% endif %}
                         {% endfor %}
+
+
+
+
+
 
 
 

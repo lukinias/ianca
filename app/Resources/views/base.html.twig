@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Unica University Template">
-      	<meta name="keywords" content="event, unica, creative, html">
+        <meta name="description" content="El Instituto Argentino de Negociación, Conciliación y Arbitraje (IANCA) es una entidad de carácter académico sin fines de lucro, constituida por especialistas en la materia provenientes de diversas disciplinas profesionales relacionadas con las actividades y sus colaterales. Nuestro Institución es fundada, el 14 de mayo de 1992, como producto de la sentida necesidad de los expertos que la componen, con la finalidad de intercambiar experiencias en materia de investigación, difusión y desarrollo. Su conformación jurídica es la una Asociación Civil sin fines de lucro En el presente, las técnicas de negociación, conciliación, mediación, arbitraje y otras apropiadas para la administración de conflictos y situaciones críticas han tomado un notable impulso y desarrollo en las organizaciones (Gobierno, Empresas, Justicia, Cámaras, Gremios, Asociaciones Civiles, etcétera) de nuestro país y del mundo. En este contexto, la reunión en torno a temas comunes y la consolidación de ideas y posturas por parte de los especialistas, investigadores y estudiosos del área, facilita la concentración del material existente y posibilita el incremento de su intercomunicación e interconsulta, arrojando como consecuencia una creciente sinergia. El IANCA es dirigido y administrado por una Comisión Directiva, elegida por la Asamblea General de Asociados. Sus necesidades son atendidas con los fondos provenientes de las cuotas abonadas por los asociados, con el producto de los eventos académicos y técnicos que organiza, con la venta de sus publicaciones, con los servicios que brinda y con las contribuciones que recibe.">
+      	<meta name="keywords" content="instituto, argentino, negociacion, conciliacion, arbitraje, mediación, justicia">
       	<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}IANCA - Instituto Argentino de Negociación, Conciliación y Arbitraje{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
@@ -75,6 +75,27 @@
 
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+
+        <!-- Newsletter section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-lg-7">
+                        <div class="section-title mb-md-0">
+                        <h3>NEWSLETTER</h3>
+                        <p>Suscribase y reciba las últimas novedades.</p>
+                    </div>
+                    </div>
+                    <div class="col-md-7 col-lg-5">
+                        <form class="newsletter">
+                            <input type="text" placeholder="Ingrese su email">
+                            <button class="site-btn">SUSCRIBIR</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Newsletter section end -->
 
         <!-- Footer section -->
       	<footer class="footer-section">

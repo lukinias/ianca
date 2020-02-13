@@ -21,7 +21,7 @@
                     {% if publicacion.activo == 1 %}
                         <div class="col-lg-4 col-md-6 course-item">
                             <div class="course-thumb">
-                                <a href="{{ publicacion.link }}" target="_blank">
+                                <a href="{{ path('publicacion', {'id':publicacion.id}) }}">
                                     <img src="{{ asset('img/publicacion/') }}{{ publicacion.imagen }}" alt="">
                                 </a>
                                 <div class="course-cat">

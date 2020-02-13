@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Detalle de curso section -->
+    <section class="about-section spad pt-0">
+        <div class="container">
+            <div class="section-title text-center">
+                <h4>{{ curso.nombre }}</h4>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 about-text">
+                    <h5>Contenido</h5>
+                    <p><u>Horas:</u> {{ curso.horas }}</p>
+                    {% if curso.mjn != null %}<p>Ministerio de Justicia Nación: {{curso.mjn}} certificado{% if curso.mjn > 1 %}s{% endif %}</p>{% endif %}
+                    {% if curso.mecaba != null %}<p>Ministerio Educación (CABA): {{curso.mecaba}} título{% if curso.mecaba > 1 %}s{% endif %} opcional{% if curso.mecaba > 1 %}es{% endif %}</p>{% endif %}</p>
+                    {% if curso.cuidi != null %}<p>CUIDI: Certificado</p>{% endif %}
+                    <p>{{ curso.descripcion }}</p>
+                </div>
+                <div class="col-lg-6 pt-5 pt-lg-0">
+                    <img src="{{ asset('img/') }}curso_default.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Detalle de curso section end-->
+{% endblock %}

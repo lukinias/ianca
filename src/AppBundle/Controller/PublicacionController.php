@@ -22,4 +22,22 @@ class PublicacionController extends Controller
              'publicacionesArray' => $publicaciones
          ));
      }
+
+     /**
+      * @Route("/publicacion/{id}", name="publicacion")
+      */
+      public function publicacionAction(Request $request, $id=null)
+      {
+          if ( $id != null ) {
+              $publicacionRepository = $this->getDoctrine()->getRepository(Publicacion::class);
+              $publicacion = $publicacionRepository->find($id);
+
+              return $this->render('publicacion/publicacion.html.twig', array(
+                  'active_menu' => '5',
+                  'publicacion' => $publicacion
+              ));
+          } else {
+              return $this->redirectToRoute('publicaciones');
+          }
+      }
 }
