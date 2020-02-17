@@ -31,7 +31,7 @@
       	<header class="header-section">
       		<div class="container">
       			<!-- logo -->
-      			<a href="{{ path('homepage') }}" class="site-logo"><img src="{{ asset('img/logo-ianca.jpg') }}" alt="Instituto Argentino de Negociación, Conciliación y Arbitraje" title="Instituto Argentino de Negociación, Conciliación y Arbitraje"><br><span class="ianca">IANCA - Instituto Argentino de<br>Negociación, Conciliación y Arbitraje</span></a>
+      			<a href="{{ path('homepage') }}" class="site-logo"><img src="{{ asset('img/logo-ianca-top.jpg') }}" alt="Instituto Argentino de Negociación, Conciliación y Arbitraje" title="Instituto Argentino de Negociación, Conciliación y Arbitraje"><br><span class="ianca">IANCA - Instituto Argentino de<br>Negociación, Conciliación y Arbitraje</span></a>
       			<div class="nav-switch">
       				<i class="fa fa-bars"></i>
       			</div>
@@ -73,29 +73,16 @@
         <br><br>
         <!-- Header section end -->
 
+        <!-- SUCCESS MESSAGE -->
+        {% for msg in app.session.flashBag.get('success') %}
+            <div class="alert alert-success" id="divSuccess" style="text-align:center">
+                {{ msg }}
+            </div>
+        {% endfor %}
+        <!-- SUCCESS MESSAGE end-->
+
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
-
-        <!-- Newsletter section -->
-        <section class="newsletter-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5 col-lg-7">
-                        <div class="section-title mb-md-0">
-                        <h3>NEWSLETTER</h3>
-                        <p>Suscribase y reciba las últimas novedades.</p>
-                    </div>
-                    </div>
-                    <div class="col-md-7 col-lg-5">
-                        <form class="newsletter">
-                            <input type="text" placeholder="Ingrese su email">
-                            <button class="site-btn">SUSCRIBIR</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Newsletter section end -->
 
         <!-- Footer section -->
       	<footer class="footer-section">

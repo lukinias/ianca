@@ -5,6 +5,11 @@ namespace AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use AppBundle\Entity\Contacto;
+use AppBundle\Entity\Newsletter;
+use AppBundle\Form\ContactoType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class DefaultController extends Controller
 {
@@ -13,8 +18,29 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+        $newsletter = new Newsletter();
+        $formulario = $this->createFormBuilder($newsletter)
+            ->add('email', EmailType::class)
+            ->add('suscribir', SubmitType::class, ['label' => 'SUSCRIBIR'])
+            ->getForm();
+
+        $formulario->handleRequest($request);
+
+        if ($formulario->isSubmitted() && $formulario->isValid()) {
+            $contacto = $formulario->getData();
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($newsletter);
+            $em->flush();
+
+            $this->addFlash('success', 'Gracias por suscribirse al newsletter! Pronto recibirá novedades.');
+
+            return $this->redirectToRoute('homepage');
+        }
+
         return $this->render('default/index.html.twig', array(
-            'active_menu' => '1'
+            'active_menu' => '1',
+            'formulario'    => $formulario->createView(),
         ));
     }
 
@@ -23,8 +49,26 @@ class DefaultController extends Controller
      */
     public function contactoAction(Request $request)
     {
+        $contacto = new Contacto();
+        $formulario = $this->createForm(ContactoType::class, $contacto);
+
+        $formulario->handleRequest($request);
+
+        if ($formulario->isSubmitted() && $formulario->isValid()) {
+            $contacto = $formulario->getData();
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($contacto);
+            $em->flush();
+
+            $this->addFlash('success', 'Gracias por contactarnos! Su consulta será respondida a la brevedad.');
+
+            return $this->redirectToRoute('contacto');
+        }
+
         return $this->render('default/contacto.html.twig', array(
-            'active_menu' => '7'
+            'active_menu'   => '7',
+            'formulario'    => $formulario->createView(),
         ));
     }
 
