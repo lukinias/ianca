@@ -16,7 +16,7 @@ class DefaultController extends Controller
     /**
      * @Route("/", name="homepage")
      */
-    public function indexAction(Request $request)
+    public function indexAction(Request $request, \Swift_Mailer $mailer)
     {
         $newsletter = new Newsletter();
         $formulario = $this->createFormBuilder($newsletter)
@@ -27,7 +27,24 @@ class DefaultController extends Controller
         $formulario->handleRequest($request);
 
         if ($formulario->isSubmitted() && $formulario->isValid()) {
-            $contacto = $formulario->getData();
+            $newsletter = $formulario->getData();
+
+            /*
+            Enviamos mail de suscripción al Newsletter
+            */
+            $fromto = array($this->container->getParameter('mailer_user') => 'IANCA Sender');
+            $message = (new \Swift_Message('Suscripción al Newsletter - IANCA'))
+                    ->setFrom($fromto)
+                    ->setTo($fromto)
+                    ->setBody(
+                        $this->renderView(
+                            // app/Resources/views/emails/newsletterSuscribe.html.twig
+                            'emails/newsletterSuscribe.html.twig',
+                            ['email' => $newsletter->getEmail()]
+                        ),
+                        'text/html'
+                    );
+            $mailer->send($message);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($newsletter);
@@ -47,7 +64,7 @@ class DefaultController extends Controller
     /**
      * @Route("/contacto", name="contacto")
      */
-    public function contactoAction(Request $request)
+    public function contactoAction(Request $request, \Swift_Mailer $mailer)
     {
         $contacto = new Contacto();
         $formulario = $this->createForm(ContactoType::class, $contacto);
@@ -56,6 +73,26 @@ class DefaultController extends Controller
 
         if ($formulario->isSubmitted() && $formulario->isValid()) {
             $contacto = $formulario->getData();
+
+            /*
+            Enviamos mail por contacto
+            */
+            $fromto = array($this->container->getParameter('mailer_user') => 'IANCA Sender');
+            $message = (new \Swift_Message('Contacto desde el sitio - IANCA'))
+                    ->setFrom($fromto)
+                    ->setTo($fromto)
+                    ->setBody(
+                        $this->renderView(
+                            // app/Resources/views/emails/contacto.html.twig
+                            'emails/contacto.html.twig',
+                            ['nombreApellido' => $contacto->getNombreApellido(),
+                            'email' => $contacto->getEmail(),
+                            'asunto' => $contacto->getAsunto(),
+                            'mensaje' => $contacto->getMensaje()]
+                        ),
+                        'text/html'
+                    );
+            $mailer->send($message);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($contacto);
