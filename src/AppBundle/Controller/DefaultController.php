@@ -32,10 +32,9 @@ class DefaultController extends Controller
             /*
             Enviamos mail de suscripción al Newsletter
             */
-            $fromto = array($this->container->getParameter('mailer_user') => 'IANCA Sender');
             $message = (new \Swift_Message('Suscripción al Newsletter - IANCA'))
-                    ->setFrom($fromto)
-                    ->setTo($fromto)
+                    ->setFrom(array($this->container->getParameter('mailer_user') => 'IANCA Sender'))
+                    ->setTo($this->container->getParameter('mailer_user'))
                     ->setBody(
                         $this->renderView(
                             // app/Resources/views/emails/newsletterSuscribe.html.twig
@@ -77,10 +76,9 @@ class DefaultController extends Controller
             /*
             Enviamos mail por contacto
             */
-            $fromto = array($this->container->getParameter('mailer_user') => 'IANCA Sender');
             $message = (new \Swift_Message('Contacto desde el sitio - IANCA'))
-                    ->setFrom($fromto)
-                    ->setTo($fromto)
+                    ->setFrom(array($this->container->getParameter('mailer_user') => 'IANCA Sender'))
+                    ->setTo($this->container->getParameter('mailer_user'))
                     ->setBody(
                         $this->renderView(
                             // app/Resources/views/emails/contacto.html.twig
