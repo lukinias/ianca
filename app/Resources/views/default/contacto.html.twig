@@ -5,33 +5,35 @@
 {% block body %}
 
     <!-- Contact section -->
-    <div class="contact-form spad pb-0 container" style="margin-top:-50px">
-		<div class="section-title text-center">
-			<h3>Contactenos</h3>
-			<p>Complete el formulario y luego presione "Enviar."</p>
-		</div>
-        {{ form_start(formulario) }}
-            {{ form_errors(formulario) }}
-			<div class="row">
-				<div class="col-lg-4">
-                    {{ form_widget(formulario.nombreApellido, { 'attr': {'placeholder': 'Nombre y apellido'} }) }}
-				</div>
-				<div class="col-lg-4">
-                    {{ form_widget(formulario.email, { 'attr': {'placeholder': 'Email'} }) }}
-				</div>
-				<div class="col-lg-4">
-                    {{ form_widget(formulario.asunto, { 'attr': {'placeholder': 'Asunto'} }) }}
-				</div>
-				<div class="col-lg-12">
-                    {{ form_widget(formulario.mensaje, { 'attr': {'placeholder': 'Mensaje'} }) }}
-					<div class="text-center">
-                        {{ form_widget(formulario.enviar) }}
-					</div>
-				</div>
-			</div>
-        {{ form_end(formulario) }}
+    <div class="contact-form spad pb-0" style="margin-top:-50px">
+        <div class="container">
+    		<div class="section-title text-center">
+    			<h3>Contactenos</h3>
+    			<p>Complete el formulario y luego presione "Enviar."</p>
+    		</div>
+            {{ form_start(formulario) }}
+                {{ form_errors(formulario) }}
+    			<div class="row">
+    				<div class="col-lg-4">
+                        {{ form_widget(formulario.nombreApellido, { 'attr': {'placeholder': 'Nombre y apellido'} }) }}
+    				</div>
+    				<div class="col-lg-4">
+                        {{ form_widget(formulario.email, { 'attr': {'placeholder': 'Email'} }) }}
+    				</div>
+    				<div class="col-lg-4">
+                        {{ form_widget(formulario.asunto, { 'attr': {'placeholder': 'Asunto'} }) }}
+    				</div>
+    				<div class="col-lg-12">
+                        {{ form_widget(formulario.mensaje, { 'attr': {'placeholder': 'Mensaje'} }) }}
+    					<div class="text-center">
+                            {{ form_widget(formulario.enviar) }}
+    					</div>
+    				</div>
+    			</div>
+            {{ form_end(formulario) }}
+        </div>
 	</div>
-    <br><br><br><br>
+    <br><br><br>
 	<section class="contact-page spad pt-0">
 		<div class="container">
 			<div class="map-section">
@@ -54,8 +56,8 @@
 					</div>
 				</div>
 				<!-- Google map -->
-				<div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2596.0034464593664!2d-58.44996135711596!3d-34.62221637153995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b9f183127%3A0x2eed977c849ef12c!2sFragata%20Pres.%20Sarmiento%2046%2C%20C1406BWB%20CABA!5e0!3m2!1ses!2sar!4v1580941462678!5m2!1ses!2sar" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				<div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.2627964692756!2d-58.450663349689044!3d-34.62279868035848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b9f183127%3A0x2eed977c849ef12c!2sFragata%20Pres.%20Sarmiento%2046%2C%20C1406BWB%20CABA!5e0!3m2!1ses!2sar!4v1582152009848!5m2!1ses!2sar" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
 			</div>
             <br>
