@@ -1,0 +1,131 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Normativa section -->
+	<section class="about-section spad pt-0">
+		<div class="container">
+			<div class="section-title text-center">
+				<h3>NORMAS del IANCA</h3>
+			</div>
+            <div class="row">
+				<div class="col-lg-12 about-text">
+                    <p><b>A continuación se detallan los documentos del IANCA y a los que se puede acceder libremente:</b></p>
+                    <ul class="about-list" style="margin-left:20px">
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'estatuto-social'}) }}">
+                                Estatuto Social
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'codigo-etica-negociacion'}) }}">
+                                 Código de Ética de Negociación
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'codigo-etica-terciacion'}) }}">
+                                Código de Ética de Terciación
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'codigo-etica-negociacion-crisis'}) }}">
+                                Código de Ética de Negociación de Crisis
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'reglamento-terciacion'}) }}">
+                                Reglamento de Terciación
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'reglamento-negociacion-crisis'}) }}">
+                                Reglamento de Negociación de Crisis
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'norma-dialogo-mediacion'}) }}">
+                                Norma de Diálogo en Mediación
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'registro-negociadores-crisis'}) }}">
+                                Registro de Negociadores de Crisis
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'registro-profesional'}) }}">Registro Profesional</a> (Negociación, Mediación, Arbitraje, Probation, Seguridad personal y Experticia)
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'criterios-basicos-financiero'}) }}">
+                                Criterios básicos aplicados a transacciones financieras
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'pautas-organizacion-congresos'}) }}">
+                                Pautas de Organización de Congresos
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'reglamento-premios-anuales'}) }}">
+                                Reglamento de Premios Anuales
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'reglamento-asociados'}) }}">
+                                Reglamento de Asociados
+                            </a>
+                        </li>
+                    </ul>
+                    <p>Las normas referidas a Administración de Crisis han sido aprobadas en forma conjunta por el IANCA y por Proteger y el Reglamento de Premios Anuales conjuntamente con la AIAP Asociación Internacional de Abogacía Preventiva.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="section-title text-center">
+				<h3>NORMAS ESTATALES</h3>
+			</div>
+            <div class="row">
+				<div class="col-lg-12 about-text">
+                    <ul class="about-list" style="margin-left:20px">
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'ley-nacional-mediacion'}) }}">
+                                Ley Nacional de Mediación
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'decreto-reglamento-ley-mediacion'}) }}">
+                                Decreto Reglamentario de Ley Nacional de Mediación
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'ley-mediacion-provincia-ba'}) }}">
+                                Ley de Mediación de la Provincia de Buenos Aires
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o"></i>
+                            <a href="{{ path('normativa', {'normativa':'decreto-reglamento-ley-mediacion-ba'}) }}">
+                                Decreto Reglamentario de la Ley de Mediación de la Provincia de Buenos Aires
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+			</div>
+		</div>
+	</section>
+	<!-- Normativa section end-->
+{% endblock %}

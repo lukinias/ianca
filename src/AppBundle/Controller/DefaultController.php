@@ -166,4 +166,75 @@ class DefaultController extends Controller
             'active_menu' => '3'
         ));
     }
+
+    /**
+     * @Route("/normativa/{normativa}", name="normativa")
+     */
+    public function normativaAction(Request $request, $normativa='')
+    {
+        if ( $normativa == '' ) {
+            return $this->render('default/normativa.html.twig', array(
+                'active_menu' => '4'
+            ));
+        } else {
+            switch ( $normativa ) {
+                case 'estatuto-social':
+                    return $this->render('default/normativas/estatuto-social.html.twig', array(
+                        'active_menu' => '4'
+                    ));
+                    break;
+                case 'codigo-etica-negociacion':
+
+                    break;
+                case 'codigo-etica-terciacion':
+
+                    break;
+                case 'codigo-etica-negociacion-crisis':
+
+                    break;
+                case 'reglamento-terciacion':
+
+                    break;
+                case 'reglamento-negociacion-crisis':
+
+                    break;
+                case 'norma-dialogo-mediacion':
+
+                    break;
+                case 'registro-negociadores-crisis':
+
+                    break;
+                case 'registro-profesional':
+
+                    break;
+                case 'criterios-basicos-financiero':
+
+                    break;
+                case 'pautas-organizacion-congresos':
+
+                    break;
+                case 'reglamento-premios-anuales':
+
+                    break;
+                case 'reglamento-asociados':
+
+                    break;
+                case 'ley-nacional-mediacion':
+
+                    break;
+                case 'decreto-reglamento-ley-mediacion':
+
+                    break;
+                case 'ley-mediacion-provincia-ba':
+
+                    break;
+                case 'decreto-reglamento-ley-mediacion-ba':
+
+                    break;
+                default:
+
+            }
+        }
+
+    }
 }
