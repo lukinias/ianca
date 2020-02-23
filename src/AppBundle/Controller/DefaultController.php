@@ -122,7 +122,7 @@ class DefaultController extends Controller
      */
     public function registroMediadoresConciliadoresAction(Request $request)
     {
-        return $this->render('default/registro-mediadores-conciliadores.html.twig', array(
+        return $this->render('default/registro/mediadores-conciliadores.html.twig', array(
             'active_menu' => '6'
         ));
     }
@@ -132,7 +132,17 @@ class DefaultController extends Controller
      */
     public function registroArbitrosAction(Request $request)
     {
-        return $this->render('default/registro-arbitros.html.twig', array(
+        return $this->render('default/registro/arbitros.html.twig', array(
+            'active_menu' => '6'
+        ));
+    }
+
+    /**
+     * @Route("/registro-profesional", name="registro-profesional")
+     */
+    public function registrorPofesionalAction(Request $request)
+    {
+        return $this->render('default/registro/profesional.html.twig', array(
             'active_menu' => '6'
         ));
     }
@@ -143,16 +153,6 @@ class DefaultController extends Controller
     public function resolucion480Action(Request $request)
     {
         return $this->render('default/resolucion-480.html.twig', array(
-            'active_menu' => '6'
-        ));
-    }
-
-    /**
-     * @Route("/registro-profesional", name="registro-profesional")
-     */
-    public function registrorPofesionalAction(Request $request)
-    {
-        return $this->render('default/registro-profesional.html.twig', array(
             'active_menu' => '6'
         ));
     }
@@ -184,7 +184,9 @@ class DefaultController extends Controller
                     ));
                     break;
                 case 'codigo-etica-negociacion':
-
+                    return $this->render('default/normativas/codigo-etica-negociacion.html.twig', array(
+                        'active_menu' => '4'
+                    ));
                     break;
                 case 'codigo-etica-terciacion':
 
