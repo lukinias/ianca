@@ -189,7 +189,9 @@ class DefaultController extends Controller
                     ));
                     break;
                 case 'codigo-etica-terciacion':
-
+                    return $this->render('default/normativas/codigo-etica-terciacion.html.twig', array(
+                        'active_menu' => '4'
+                    ));
                     break;
                 case 'codigo-etica-negociacion-crisis':
 

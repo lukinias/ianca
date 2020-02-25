@@ -124,12 +124,21 @@ $(window).on('load', function() {
 })(jQuery);
 
 function initializeGoTopFAB() {
-   var FAB = $("<div class='fab'><span></span></div>");
+	var FAB = $("<div class='fab' id='gototop' style='display:none'><span></span></div>");
 
-   FAB.on("click", function(ev) {
+	FAB.on("click", function(ev) {
 		var body = $("html, body");
 		body.stop().animate({scrollTop:0}, 500, 'swing');
-   })
+	});
 
-   $("body").append(FAB);
+	$("body").append(FAB);
+
+	$(window).scroll(function() {
+		if ( $(window).scrollTop() > 100) {
+			$("#gototop").fadeIn();
+		} else {
+			$("#gototop").fadeOut();
+		}
+
+	});
 }
