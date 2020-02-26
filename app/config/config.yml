@@ -44,7 +44,7 @@ doctrine:
         port: '3306'
         dbname: 'heroku_f76a202b934a09d'
         user: 'baf744ff3e96aa'
-        password: '419c6ef1 '
+        password: '419c6ef1'
         charset: UTF8
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
