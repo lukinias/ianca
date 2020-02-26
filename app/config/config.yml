@@ -41,7 +41,7 @@ doctrine:
     dbal:
         driver: pdo_mysql
         host: 'us-cdbr-iron-east-04.cleardb.net'
-        port: '%database_port%'
+        port: '3306'
         dbname: 'heroku_f76a202b934a09d'
         user: 'baf744ff3e96aa'
         password: '419c6ef1 '
