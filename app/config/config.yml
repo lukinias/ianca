@@ -66,7 +66,7 @@ swiftmailer:
     password: 'taunus2.3ghia'
     encryption: 'tls'
     port: '587'
-    #auth_mode: '%mailer_auth_mode%'
+    auth_mode: 'login'
     spool: { type: memory }
 
 sensio_framework_extra:
