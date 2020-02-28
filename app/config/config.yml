@@ -61,18 +61,13 @@ doctrine:
 # Swiftmailer Configuration
 swiftmailer:
     transport: 'smtp'
-    host: 'smtp.gmail.com'
-    username: 'lukinias79@gmail.com'
+    host: 'smtp.mailgun.org'
+    username: 'postmaster@sandbox4606a7e1e19b456487db6ccdb4922a11.mailgun.org'
     password: 'taunus2.3ghia'
-    encryption: 'ssl'
+    encryption: 'TLS'
     port: '465'
     auth_mode: 'login'
     spool: { type: memory }
-    stream_options:
-      ssl:
-        allow_self_signed: true
-        verify_peer: false
-        verify_peer_name: false
 
 sensio_framework_extra:
    router:
