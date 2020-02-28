@@ -64,8 +64,8 @@ swiftmailer:
     host: 'smtp.mailgun.org'
     username: 'postmaster@sandbox4606a7e1e19b456487db6ccdb4922a11.mailgun.org'
     password: 'taunus2.3ghia'
-    encryption: 'TLS'
-    port: '465'
+    encryption: 'ssl'
+    port: '587'
     auth_mode: 'login'
     spool: { type: memory }
 
