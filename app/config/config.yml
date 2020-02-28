@@ -60,13 +60,13 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: smtp
-    host: smtp.gmail.com
-    username: lukinias79@gmail.com
-    password: taunus2.3ghia
-    encryption: ssl
-    port: 465
-    auth_mode: login
+    transport: 'smtp'
+    host: 'smtp.gmail.com'
+    username: 'lukinias79@gmail.com'
+    password: 'taunus2.3ghia'
+    encryption: 'ssl'
+    port: '465'
+    auth_mode: 'login'
     spool: { type: memory }
     stream_options:
       ssl:
