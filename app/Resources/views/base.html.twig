@@ -55,8 +55,11 @@
       	<nav class="nav-section">
       		<div class="container">
       			<div class="nav-right">
-      				<!--a href=""><i class="fa fa-search"></i></a>
-      				<a href=""><i class="fa fa-shopping-cart"></i></a-->
+                    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                        <a href="logout"><i class="fa fa-sign-out"></i></a>
+                    {% else %}
+                        <a href="{{ path('login') }}"><i class="fa fa-user"></i></a>
+                    {% endif %}
       			</div>
       			<ul class="main-menu">
       				<li {% if active_menu == '1' %}class="active"{% endif %}><a href="{{ path('homepage') }}">Inicio</a></li>
