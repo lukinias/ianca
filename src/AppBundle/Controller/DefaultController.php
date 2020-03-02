@@ -10,6 +10,9 @@ use AppBundle\Entity\Newsletter;
 use AppBundle\Form\ContactoType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use AppBundle\Entity\Usuario;
+use AppBundle\Form\LoginType;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class DefaultController extends Controller
 {
@@ -56,7 +59,7 @@ class DefaultController extends Controller
 
         return $this->render('default/index.html.twig', array(
             'active_menu' => '1',
-            'formulario'    => $formulario->createView(),
+            'formulario'    => $formulario->createView()
         ));
     }
 
@@ -103,7 +106,7 @@ class DefaultController extends Controller
 
         return $this->render('default/contacto.html.twig', array(
             'active_menu'   => '7',
-            'formulario'    => $formulario->createView(),
+            'formulario'    => $formulario->createView()
         ));
     }
 
@@ -239,6 +242,6 @@ class DefaultController extends Controller
 
             }
         }
-
     }
+    
 }
