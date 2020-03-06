@@ -34,7 +34,7 @@ class DefaultController extends Controller
 
             /*
             Enviamos mail de suscripción al Newsletter
-            */
+
             $message = (new \Swift_Message('Suscripción al Newsletter - IANCA'))
                     ->setFrom(array($this->container->getParameter('mailer_user') => 'IANCA Sender'))
                     ->setTo($this->container->getParameter('mailer_user'))
@@ -47,6 +47,7 @@ class DefaultController extends Controller
                         'text/html'
                     );
             $mailer->send($message);
+            */
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($newsletter);
@@ -78,7 +79,7 @@ class DefaultController extends Controller
 
             /*
             Enviamos mail por contacto
-            */
+
             $message = (new \Swift_Message('Contacto desde el sitio - IANCA'))
                     ->setFrom(array($this->container->getParameter('mailer_user') => 'IANCA Sender'))
                     ->setTo($this->container->getParameter('mailer_user'))
@@ -94,6 +95,7 @@ class DefaultController extends Controller
                         'text/html'
                     );
             $mailer->send($message);
+            */
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($contacto);
@@ -243,5 +245,5 @@ class DefaultController extends Controller
             }
         }
     }
-    
+
 }

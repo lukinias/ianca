@@ -45,31 +45,38 @@ class Curso
     /**
      * @var int
      *
-     * @ORM\Column(name="mjn", type="integer", nullable=true)
+     * @ORM\Column(name="mjn", type="integer")
      */
     private $mjn;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="mecaba", type="integer", nullable=true)
+     * @ORM\Column(name="mecaba", type="integer")
      */
     private $mecaba;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="cuidi", type="integer", nullable=true)
+     * @ORM\Column(name="cuidi", type="integer")
      */
     private $cuidi;
 
     /**
      * @var boolean
      *
-     * @ORM\Column(name="activo", type="boolean", nullable=false, options={"default":1})
+     * @ORM\Column(name="activo", type="boolean")
      */
-    private $activo='1';
+    private $activo;
 
+    public function __construct() {
+        $this->activo = true;
+        $this->horas = 0;
+        $this->mjn = 0;
+        $this->mecaba = 0;
+        $this->cuidi = 0;
+    }
 
     /**
      * Get id

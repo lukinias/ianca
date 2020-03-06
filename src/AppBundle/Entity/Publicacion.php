@@ -66,10 +66,13 @@ class Publicacion
     /**
      * @var bool
      *
-     * @ORM\Column(name="activo", type="boolean", options={"default":1})
+     * @ORM\Column(name="activo", type="boolean")
      */
-    private $activo=1;
+    private $activo;
 
+    public function __construct() {
+        $this->activo = true;
+    }
 
     /**
      * Get id

@@ -143,5 +143,12 @@
       	<script src="{{ asset('js/masonry.pkgd.min.js') }}"></script>
       	<script src="{{ asset('js/magnific-popup.min.js') }}"></script>
       	<script src="{{ asset('js/main.js') }}"></script>
+        <script type="text/javascript">
+            setTimeout(function(){
+                if ($('#divSuccess').length > 0) {
+                    $('#divSuccess').toggle("slow");
+                }
+            }, 5000)
+        </script>
     </body>
 </html>

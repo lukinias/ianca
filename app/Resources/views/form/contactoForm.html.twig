@@ -33,3 +33,8 @@
     {%- endif -%}
     <button type="{{ type|default('button') }}" class="site-btn" {{ block('button_attributes') }}>{{ translation_domain is same as(false) or label is same as(false) ? label : label|trans({}, translation_domain) }}</button>
 {%- endblock button_widget -%}
+
+{%- block form_widget_simple -%}
+    {%- set type = type|default('text') -%}
+    <input type="{{ type }}" class="comment-form --contact" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+{%- endblock form_widget_simple -%}

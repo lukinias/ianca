@@ -4,9 +4,48 @@
     <!-- Listado de cursos section -->
 	<div class="container services">
 		<div class="section-title text-center">
-			<h3>Listado de cursos</h3>
+			<h3>Administración de cursos</h3>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<a href="{{ path('editar-curso') }}"><button class="site-btn">Agregar</button></a>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-lg-12 about-text">
+				<div style="overflow-x:auto;">
+					<table border="1" cellspacing="2" cellpadding="5" style="font-family: 'Rubik', sans-serif;">
+						<tr>
+							<th style="background-color:LightGrey;width:50%" rowspan="2"> Actividades </th>
+							<th style="background-color:LightGrey" colspan="3"> Cursos Oficiales </th>
+							<th style="background-color:LightGrey" rowspan="2"> Horas </th>
+							<th style="background-color:LightGrey" rowspan="2"> Acciones </th>
+						</tr>
+						<tr>
+							<th style="background-color:LightGrey"> Ministerio de Justicia Nación </th>
+							<th style="background-color:LightGrey"> Ministerio Educación (CABA) </th>
+							<th style="background-color:LightGrey"> CUIDI </th>
+						</tr>
+
+						{% for curso in cursosArray %}
+							{% if curso.activo == 1 %}
+								<tr>
+									<td>{{ curso.nombre }}</td>
+									<td>{% if curso.mjn != null %}{{curso.mjn}} certificado{% if curso.mjn > 1 %}s{% endif %}{% endif %}</td>
+									<td>{% if curso.mecaba != null %}{{curso.mecaba}} título{% if curso.mecaba > 1 %}s{% endif %} opcional{% if curso.mecaba > 1 %}es{% endif %}{% endif %}</td>
+									<td>{% if curso.cuidi != null %}Certificado{% endif %}</td>
+									<td>{{ curso.horas }}</td>
+									<td><a href="{{ path('editar-curso', {'id':curso.id}) }}">Editar</a></td>
+								</tr>
+							{% endif %}
+						{% endfor %}
+
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
-	<br><br><br>
+	<br><br><br><br>
 	<!-- Listado de cursos section end -->
 {% endblock %}
