@@ -1524,6 +1524,7 @@ ol {
 .comment-form input[type='text'],
 .comment-form input[type='email'],
 .comment-form input[type='password'],
+.comment-form input[type='number'],
 .comment-form textarea {
 	width: 100%;
 	border: 1px solid #cccccc;
@@ -1540,6 +1541,7 @@ ol {
 .comment-form.--contact input[type='text'],
 .comment-form.--contact input[type='email'],
 .comment-form.--contact input[type='password'],
+.comment-form.--contact input[type='number'],
 .comment-form.--contact textarea {
 	border: 1px solid #e1e1e1;
 }

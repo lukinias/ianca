@@ -1,12 +1,75 @@
 {% extends 'base.html.twig' %}
 
+{% form_theme formulario 'form/contactoForm.html.twig' %}
+
 {% block body %}
     <!-- Editar curso section -->
 	<div class="container services">
 		<div class="section-title text-center">
 			<h3>Edición de curso</h3>
 		</div>
+		{{ form_start(formulario) }}
+			{{ form_errors(formulario) }}
+			<div class="row">
+				<div class="col-lg-3">
+					Nombre:
+				</div>
+				<div class="col-lg-6">
+					{{ form_widget(formulario.nombre) }}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3">
+					Descripción:
+				</div>
+				<div class="col-lg-6">
+					{{ form_widget(formulario.descripcion) }}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3">
+					Horas:
+				</div>
+				<div class="col-lg-2">
+					{{ form_widget(formulario.horas) }}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3">
+					Ministerio de Justicia Nación:
+				</div>
+				<div class="col-lg-2">
+					{{ form_widget(formulario.mjn) }}
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-lg-3">
+					Ministerio Educación (CABA):
+				</div>
+				<div class="col-lg-2">
+					{{ form_widget(formulario.mecaba) }}
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-lg-3">
+					CUIDI:
+				</div>
+				<div class="col-lg-2">
+					{{ form_widget(formulario.cuidi) }}
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="text-center">
+						{{ form_widget(formulario.guardar) }}
+					</div>
+				</div>
+			</div>
+		{{ form_end(formulario) }}
 	</div>
-	<br><br><br>
+	<br><br><br><br>
 	<!-- Editar curso section end -->
 {% endblock %}
