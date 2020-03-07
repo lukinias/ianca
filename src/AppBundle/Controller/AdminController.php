@@ -32,7 +32,7 @@ class AdminController extends Controller
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 
         $cursoRepository = $this->getDoctrine()->getRepository(Curso::class);
-        $cursos = $cursoRepository->findByActivo(1, array('nombre' => 'ASC'));
+        $cursos = $cursoRepository->findBy(array(), array('nombre' => 'ASC'));
 
         return $this->render('admin/listado-cursos.html.twig', array(
             'active_menu' => '1',
@@ -48,7 +48,7 @@ class AdminController extends Controller
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 
         $curso = new Curso();
-        
+
         if ( $id != null ) {
             $cursoRepository = $this->getDoctrine()->getRepository(Curso::class);
             $curso = $cursoRepository->find($id);
