@@ -57,7 +57,7 @@
       			<div class="nav-right">
                     {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                         <a href="{{ path('admin') }}" alt="Ingreso" title="Ingreso"><i class="fa fa-user"></i></a>
-                        <a href="logout" alt="Cerrar sesión" title="Cerrar sesión"><i class="fa fa-sign-out"></i></a>
+                        <a href="/logout" alt="Cerrar sesión" title="Cerrar sesión"><i class="fa fa-sign-out"></i></a>
                     {% else %}
                         <a href="{{ path('login') }}" alt="Ingreso" title="Ingreso"><i class="fa fa-user"></i></a>
                     {% endif %}
