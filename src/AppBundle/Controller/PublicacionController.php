@@ -19,6 +19,7 @@ class PublicacionController extends Controller
 
          return $this->render('publicacion/publicaciones.html.twig', array(
              'active_menu' => '5',
+             'ruta_imagen' => $this->getParameter('publicaciones_imagenes_directory'),
              'publicacionesArray' => $publicaciones
          ));
      }
@@ -34,6 +35,7 @@ class PublicacionController extends Controller
 
               return $this->render('publicacion/publicacion.html.twig', array(
                   'active_menu' => '5',
+                  'ruta_imagen' => $this->getParameter('publicaciones_imagenes_directory'),
                   'publicacion' => $publicacion
               ));
           } else {

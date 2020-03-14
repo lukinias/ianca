@@ -11,10 +11,10 @@
             <div class="row">
                 <div class="col-lg-6 about-text">
                     <h5>Descripción</h5>
-                    <p>{{ publicacion.descripcionLarga }}</p>
+                    <p>{{ publicacion.descripcionLarga | raw }}</p>
                 </div>
                 <div class="col-lg-6 pt-5 pt-lg-0">
-                    <img src="{{ asset('img/publicacion/') }}{{ publicacion.imagen }}" alt="">
+                    <img src="{{ asset('img/uploads/publicaciones_imagenes/' ~ publicacion.imagen) }}" alt="">
                 </div>
                 <a href="{{ publicacion.link }}" target="_blank">
                     <div class="site-btn center" style="margin-top:30px;">OBTENER</div>

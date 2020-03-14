@@ -18,22 +18,20 @@
             <div class="row">
                 <!-- publicacion item -->
                 {% for publicacion in publicacionesArray %}
-                    {% if publicacion.activo == 1 %}
-                        <div class="col-lg-4 col-md-6 course-item">
-                            <div class="course-thumb">
-                                <a href="{{ path('publicacion', {'id':publicacion.id}) }}">
-                                    <img src="{{ asset('img/publicacion/') }}{{ publicacion.imagen }}" alt="">
-                                </a>
-                                <div class="course-cat">
-                                    <span>{{ publicacion.obra }}</span>
-                                </div>
-                            </div>
-                            <div class="course-info">
-                                <h5>{{ publicacion.descripcionCorta }}</h5>
-                                <div class="date"><u>Autores</u>: {{ publicacion.autores }}</div>
+                    <div class="col-lg-4 col-md-6 course-item">
+                        <div class="course-thumb">
+                            <a href="{{ path('publicacion', {'id':publicacion.id}) }}">
+                                <img src="{{ asset('img/uploads/publicaciones_imagenes/' ~ publicacion.imagen) }}">
+                            </a>
+                            <div class="course-cat">
+                                <span>{{ publicacion.obra }}</span>
                             </div>
                         </div>
-                    {% endif %}
+                        <div class="course-info">
+                            <h5>{{ publicacion.descripcionCorta }}</h5>
+                            <div class="date"><u>Autores</u>: {{ publicacion.autores }}</div>
+                        </div>
+                    </div>
                 {% endfor %}
             </div>
     	</div>

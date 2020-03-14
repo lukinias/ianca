@@ -59,7 +59,7 @@ class Publicacion
     /**
      * @var string
      *
-     * @ORM\Column(name="imagen", type="string", length=50)
+     * @ORM\Column(name="imagen", type="string", nullable=true)
      */
     private $imagen;
 
