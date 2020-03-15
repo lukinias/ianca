@@ -204,7 +204,9 @@ class DefaultController extends Controller
                     ));
                     break;
                 case 'reglamento-terciacion':
-
+                    return $this->render('default/normativas/reglamento-terciacion.html.twig', array(
+                        'active_menu' => '4'
+                    ));
                     break;
                 case 'reglamento-negociacion-crisis':
 
