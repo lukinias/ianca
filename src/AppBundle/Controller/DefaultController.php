@@ -209,16 +209,25 @@ class DefaultController extends Controller
                     ));
                     break;
                 case 'reglamento-negociacion-crisis':
-
+                    return $this->render('default/normativas/reglamento-negociacion-crisis.html.twig', array(
+                        'active_menu' => '4'
+                    ));
                     break;
                 case 'norma-dialogo-mediacion':
-
+                    return $this->render('default/normativas/norma-dialogo-mediacion.html.twig', array(
+                        'active_menu' => '4'
+                    ));
                     break;
                 case 'registro-negociadores-crisis':
-
+                    return $this->render('default/normativas/registro-negociadores-crisis.html.twig', array(
+                        'active_menu' => '4'
+                    ));
+                break;
                     break;
                 case 'registro-profesional':
-
+                    return $this->render('default/normativas/registro-profesional.html.twig', array(
+                        'active_menu' => '4'
+                    ));
                     break;
                 case 'criterios-basicos-financiero':
 
@@ -230,18 +239,6 @@ class DefaultController extends Controller
 
                     break;
                 case 'reglamento-asociados':
-
-                    break;
-                case 'ley-nacional-mediacion':
-
-                    break;
-                case 'decreto-reglamento-ley-mediacion':
-
-                    break;
-                case 'ley-mediacion-provincia-ba':
-
-                    break;
-                case 'decreto-reglamento-ley-mediacion-ba':
 
                     break;
                 default:
