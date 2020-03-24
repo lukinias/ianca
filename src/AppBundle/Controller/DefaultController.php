@@ -229,17 +229,25 @@ class DefaultController extends Controller
                         'active_menu' => '4'
                     ));
                     break;
+                    /*
                 case 'criterios-basicos-financiero':
 
                     break;
+                    */
                 case 'pautas-organizacion-congresos':
-
+                    return $this->render('default/normativas/pautas-organizacion-congresos.html.twig', array(
+                        'active_menu' => '4'
+                    ));
                     break;
                 case 'reglamento-premios-anuales':
-
+                    return $this->render('default/normativas/reglamento-premios-anuales.html.twig', array(
+                        'active_menu' => '4'
+                    ));
                     break;
                 case 'reglamento-asociados':
-
+                    return $this->render('default/normativas/reglamento-asociados.html.twig', array(
+                        'active_menu' => '4'
+                    ));
                     break;
                 default:
 
