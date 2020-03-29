@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Preguntas Frecuentes section -->
+	<section class="about-section spad pt-0">
+		<div class="container">
+			<div class="section-title text-center">
+				<h3>Preguntas Frecuentes</h3>
+			</div>
+            <div class="row">
+				<div class="col-lg-12 about-text">
+                    <p>En las secciones siguientes Usted podrá encontrar muchas de las preguntas o consultas que habitualmente nos llegan al Instituto o a las Cátedras.</p>
+                    <p>Las preguntas están clasificadas por sus temáticas temáticas:
+                        <ul class="about-list" style="margin-left:20px">
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                <a href="{{ path('faq', {tematica:'negociacion'}) }}">Negociación</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                <a href="{{ path('faq', {tematica:'mediacion-conciliacion'}) }}">Mediación y/o Conciliación</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                <a href="{{ path('faq', {tematica:'terciacion-institucional-preventiva'}) }}">Terciación Institucional Preventiva (TIP)</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                <a href="{{ path('faq', {tematica:'arbitraje'}) }}">Arbitraje</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                <a href="{{ path('faq', {tematica:'usura'}) }}">Usura</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                <a href="{{ path('faq', {tematica:'consumo-y-uso'}) }}">Consumo y uso</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                <a href="{{ path('faq', {tematica:'probation'}) }}">Probation</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                <a href="{{ path('faq', {tematica:'liquidaciones'}) }}">Liquidaciones, ajuste Intereses (Numeratio)</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                <a href="{{ path('faq', {tematica:'seguridad-personal-ante-el-delito'}) }}">Seguridad Personal ante el Delito</a>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+			</div>
+		</div>
+	</section>
+	<!-- Preguntas Frecuentes section end-->
+{% endblock %}

@@ -250,9 +250,163 @@ class DefaultController extends Controller
                     ));
                     break;
                 default:
-
+                    return $this->render('default/normativa.html.twig', array(
+                        'active_menu' => '4'
+                    ));
             }
         }
     }
 
+    /**
+     * @Route("/poder-adquisitivo", name="poder-adquisitivo")
+     */
+    public function poderAdquisitivoAction(Request $request)
+    {
+        return $this->render('default/poder-adquisitivo.html.twig', array(
+            'active_menu' => '1'
+        ));
+    }
+
+    /**
+     * @Route("/registros-profesionales", name="registros-profesionales")
+     */
+    public function registrosProfesionalesAction(Request $request)
+    {
+        return $this->render('default/registros-profesionales.html.twig', array(
+            'active_menu' => '1'
+        ));
+    }
+
+    /**
+     * @Route("/faq/{tematica}", name="faq")
+     */
+    public function faqAction(Request $request, $tematica='')
+    {
+        if ( $tematica == '' ) {
+            return $this->render('default/faq.html.twig', array(
+                'active_menu' => '1'
+            ));
+        } else {
+            switch ( $tematica ) {
+                case 'negociacion':
+                    return $this->render('default/faq/negociacion.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'mediacion-conciliacion':
+                    return $this->render('default/faq/mediacion-conciliacion.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'terciacion-institucional-preventiva':
+                    return $this->render('default/faq/terciacion-institucional-preventiva.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'arbitraje':
+                    return $this->render('default/faq/arbitraje.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'usura':
+                    return $this->render('default/faq/usura.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'consumo-y-uso':
+                    return $this->render('default/faq/consumo-y-uso.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'probation':
+                    return $this->render('default/faq/probation.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'liquidaciones':
+                    return $this->render('default/faq/liquidaciones.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'seguridad-personal-ante-el-delito':
+                    return $this->render('default/faq/seguridad-personal-ante-el-delito.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                default:
+                    return $this->render('default/faq.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+            }
+        }
+    }
+
+    /**
+     * @Route("/que-es/{tematica}", name="que-es")
+     */
+    public function queEsAction(Request $request, $tematica='')
+    {
+        if ( $tematica == '' ) {
+            return $this->render('default/que-es.html.twig', array(
+                'active_menu' => '1'
+            ));
+        } else {
+            switch ( $tematica ) {
+                case 'arbitraje':
+                    return $this->render('default/que-es/arbitraje.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'mediacion':
+                    return $this->render('default/que-es/mediacion.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'negociacion':
+                    return $this->render('default/que-es/negociacion.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'terciacion-institucional-preventiva':
+                    return $this->render('default/que-es/terciacion-institucional-preventiva.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'usura':
+                    return $this->render('default/que-es/usura.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'defensa-consumidor':
+                    return $this->render('default/que-es/defensa-consumidor.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'probation':
+                    return $this->render('default/que-es/probation.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'seguridad-personal-ante-el-delito':
+                    return $this->render('default/que-es/seguridad-personal-ante-el-delito.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'inflacion-poder-adquisitivo-del-dinero':
+                    return $this->render('default/que-es/inflacion-poder-adquisitivo-del-dinero.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                case 'liquidaciones':
+                    return $this->render('default/que-es/liquidaciones.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+                    break;
+                default:
+                    return $this->render('default/que-es.html.twig', array(
+                        'active_menu' => '1'
+                    ));
+            }
+        }
+    }
 }

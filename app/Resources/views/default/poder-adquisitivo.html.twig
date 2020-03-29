@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- poder adquisitivo section -->
+	<section class="about-section spad pt-0">
+		<div class="container">
+			<div class="section-title text-center">
+				<h3>Poder Adquisitivo del Dinero</h3>
+			</div>
+            <div class="row">
+				<div class="col-lg-12 about-text">
+                    <p>Además de las distintas monedas de curso legal que hemos ido teniendo en nuestra historia, en la Argentina existen dos monedas de tienen su poder adquisitivo de compra constante, y han sido establecidas por las Normas IRAM 34 516 y 34 554.</p>
+                    <p>Estas monedas, realmente constantes en su capacidad de adquisición son:
+                        <ul class="about-list" style="margin-left:20px">
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                el Módulo Monetario (MM) para las transacciones comerciales
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                el Módulo Monetario Consumidor (MMC) para las relaciones laborales y de consumo
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                el Módulo Monetario Consumidor CABA (MCBA) para las relaciones laborales y de consumo
+                            </li>
+                        </ul>
+                    </p>
+                    <p>Los cálculos y los análisis con estas monedas virtuales son de gran utilidad para posibilitar depurar el fenómeno inflacionario de la información y de esa forma facilitar su mejor comprensión y dar una mayor claridad al estudio de los otros fenómenos económicos y financieros que aparecen entremezclados, confundidos y confusos.</p>
+                    <p>Los cálculos de los valores de las tres monedas constantes, están basados en:
+                        <ul class="about-list" style="margin-left:20px">
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                El Módulo Monetario (MM) en el Índice de Precios Mayoristas publicado por el INDEC (Instituto Nacional de Estadística y Censos)
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                El Módulo Monetario Consumidor (MMC) en el Índice de Precios al Consumidor publicado por el INDEC (Instituto Nacional de Estadística y Censos)
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                El Módulo Consumidor de la CABA (MCBA) n el Índice de Precios al Consumidor publicado por el INDEC (Instituto Nacional de Estadística y Censos), desde 1.975 a 2.007, en el Índice de precios al Consumidor para la Argentina del State Prices de 2.008 a 2.012 y en el Índice de Precios al Consumidor de la Dirección General de Estadísticas y Censos del Gobierno de la Ciudad Autónoma de Buenos Aires.
+                            </li>
+                        </ul>
+                    </p>
+                    <p>Los valores de cotización mensuales (último día calendario de cada mes) y diarios están en las planillas de cálculo siguientes:
+                        <ul class="about-list" style="margin-left:20px">
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                Módulos Monetarios
+                                <a href="{{ asset('files/modulos.xls') }}" target="_blank"><i class="fa fa-download fa-lg"></i></a>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                Módulos Monetarios Consumidor
+                                <a href="{{ asset('files/modulosc.xls') }}" target="_blank"><i class="fa fa-download fa-lg"></i></a>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-square-o"></i>
+                                Módulos Monetarios Consumidor CABA
+                                <a href="{{ asset('files/moduloscCABA.xls') }}" target="_blank"><i class="fa fa-download fa-lg"></i></a>
+                            </li>
+                        </ul>
+                    </p>
+                    <p>Estas cotizaciones se actualizan mensualmente y están bloqueadas para su modificación, por lo que cuando aparece el cuadro de diálogo inicial se debe marcar "sólo lectura". Para poder imprimir las cotizaciones (globales y mensuales) basta con marcar los botones correspondientes que están en la parte superior izquierda de la planilla de cálculo.</p>
+                    <p>Además incluimos los distintos <b>signos monetarios</b> <a href="{{ asset('files/SIGNOSMO.XLS') }}" target="_blank"><i class="fa fa-download fa-lg" style="color:#f6783a"></i></a> que la Argentina ha tenido desde larga data y los <b>coeficientes de conversión</b> <a href="{{ asset('files/conversi.xls') }}" target="_blank"><i class="fa fa-download fa-lg" style="color:#f6783a"></i></a> de los módulos monetarios y módulos monetarios consumidor.</p>
+                    <p>Los Módulos Monetarios están basados en el índice de Precios Mayoristas del INDEC, y en este momento el Factor de conversión, para determinar la cotización del último día del mes calendario es: 0,02219744. Es decir se multiplica el valor del índice por el factor, y directamente obtenemos así la cotización. Para la determinación de los valores diarios se hace el cálculo exponencial de su crecimiento para cada día.</p>
+                    <p>Los Módulos Monetarios Consumidor están basados en el índice de Precios al Consumidor del INDEC, y en este momento el Factor de Conversión, para determinar la cotización del último día del mes calendario es: 0,047759692. Es decir se multiplica el valor del índice por el factor, y directamente obtenemos así la cotización. Para la determinación de los valores diarios se hace el cálculo exponencial de su crecimiento para cada día.</p>
+                    <p>Los Módulos Monetarios Consumidor para la Ciudad Autónoma de Buenos Aires  están basados en el índice de Precios al Consumidor de la Dirección de Estadísticas y Censos del Gobierno de la Ciudad de Buenos Aires, y en este momento el Factor de Conversión, para determinar la cotización del último día del mes calendario es: 0,12036453. Es decir se multiplica el valor del índice por el factor, y directamente obtenemos así la cotización. Para la determinación de los valores diarios se hace el cálculo exponencial de su crecimiento para cada día. Para las cotizaciones anteriores a 2.013 se usaron otros índices.</p>
+                    <p>Estos índices están expresados en el signo monetario de cada momento y también tienen determinadas lo cambios de base que han ido teniendo los distintos índices de precios.</p>
+                </div>
+			</div>
+		</div>
+	</section>
+	<!-- poder adquisitivo section end-->
+{% endblock %}
