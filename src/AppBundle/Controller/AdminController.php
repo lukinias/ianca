@@ -69,7 +69,7 @@ class AdminController extends Controller
 
             $this->addFlash('success', 'El curso se ha guardado correctamente.');
 
-            return $this->redirectToRoute('listado-cursos');
+            //return $this->redirectToRoute('listado-cursos');
         }
 
         return $this->render('admin/editar-curso.html.twig', array(
@@ -119,7 +119,7 @@ class AdminController extends Controller
             if ($imagenFile) {
                 $originalFilename = pathinfo($imagenFile->getClientOriginalName(), PATHINFO_FILENAME);
                 // this is needed to safely include the file name as part of the URL
-                $newFilename = $originalFilename.'-'.uniqid().'.'.$imagenFile->guessExtension();
+                $newFilename = uniqid().'.'.$imagenFile->guessExtension();
 
                 // Move the file to the directory where imagen are stored
                 try {
@@ -136,13 +136,17 @@ class AdminController extends Controller
 
             $publicacion = $formulario->getData();
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($publicacion);
-            $em->flush();
+            try {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($publicacion);
+                $em->flush();
+            } catch (FileException $e) {
+                $this->addFlash('error', 'Hubo un problema al guardar la capacitación.');
+            }
 
             $this->addFlash('success', 'La publicación se ha guardado correctamente.');
 
-            return $this->redirectToRoute('listado-publicaciones');
+            //return $this->redirectToRoute('listado-publicaciones');
         }
 
         return $this->render('admin/editar-publicacion.html.twig', array(

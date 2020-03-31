@@ -22,15 +22,16 @@ class PublicacionType extends AbstractType
            ->add('descripcion_larga', CKEditorType::class, array('config' => array('toolbar' => 'standard')))
            ->add('autores', TextType::class)
            ->add('link', TextType::class)
-           ->add('imagen', FileType::class, [
-                'label' => 'Imagen (JPG, PNG file)',
+           ->add('imagen', FileType::class, array(
                 // unmapped means that this field is not associated to any entity property
                 'mapped' => false,
 
                 // make it optional so you don't have to re-upload the PDF file
                 // every time you edit the Product details
                 'required' => false,
-            ])
+
+                'attr' => array('onchange' => 'validaImagen(event)'),
+            ))
            ->add('activo', CheckboxType::class, array('required' => false))
 
            ->add('guardar', SubmitType::class, ['label' => 'Guardar'])

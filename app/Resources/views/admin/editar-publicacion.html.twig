@@ -51,6 +51,14 @@
 					{{ form_widget(formulario.link) }}
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-lg-2">
+					Activo:
+				</div>
+				<div class="col-lg-10">
+					{{ form_widget(formulario.activo) }}
+				</div>
+			</div>
 			<br>
 			<div class="row">
 				<div class="col-lg-2">
@@ -61,7 +69,8 @@
 						{{ form_widget(formulario.imagen) }}
 					</div>
 					<div class="col-lg-3">
-						<img src="{{ asset('img/uploads/publicaciones_imagenes/' ~ imagen_nombre) }}" alt="">
+						<img id="thumbPublicacion" scr="" alt="">
+						<img id="imagenPublicacion" src="{{ asset('img/uploads/publicaciones_imagenes/' ~ imagen_nombre) }}" alt="">
 					</div>
 					<div class="col-lg-1"></div>
 				{% else %}
@@ -72,16 +81,9 @@
 			</div>
 			<br>
 			<div class="row">
-				<div class="col-lg-2">
-					Activo:
-				</div>
-				<div class="col-lg-10">
-					{{ form_widget(formulario.activo) }}
-				</div>
-			</div><br>
-			<div class="row">
 				<div class="col-lg-12">
 					<div class="text-center">
+						<a href="{{ path('listado-publicaciones') }}"><div class="site-btn" style="margin-right:20px">Volver</div></a>
 						{{ form_widget(formulario.guardar) }}
 					</div>
 				</div>
@@ -90,4 +92,8 @@
 	</div>
 	<br><br><br><br>
 	<!-- Editar publicación section end -->
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript" src="{{ asset('js/uploadImg.js') }}">
 {% endblock %}
