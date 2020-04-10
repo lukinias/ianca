@@ -43,11 +43,11 @@ twig:
 doctrine:
     dbal:
         driver: pdo_mysql
-        host: '%database_host%'
-        port: '%database_port%'
-        dbname: '%database_name%'
-        user: '%database_user%'
-        password: '%database_password%'
+        host: 'us-cdbr-iron-east-04.cleardb.net'
+        port: '3306'
+        dbname: 'heroku_f76a202b934a09d'
+        user: 'baf744ff3e96aa'
+        password: '419c6ef1'
         charset: UTF8
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
@@ -63,13 +63,13 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: '%mailer_transport%'
-    host: '%mailer_host%'
-    username: '%mailer_user%'
-    password: '%mailer_password%'
-    #encryption: '%mailer_encryption%'
-    #port: '%mailer_port%'
-    #auth_mode: '%mailer_auth_mode%'
+    transport: 'smtp'
+    host: 'smtp.gmail.com'
+    username: 'lukinias79@gmail.com'
+    password: 'taunus2.3ghia'
+    encryption: 'tls'
+    port: '587'
+    auth_mode: 'login'
     spool: { type: memory }
 
 sensio_framework_extra:
