@@ -36,13 +36,15 @@ var uploadImgValidator = function () {
         if ( !this.validateTypes( file ) ) {
             $('#alertSound')[0].play();
             this.deleteImgs();
-            alert('Tipo de archivo no válido. Tipos permitidos: jpg, jpeg, png o gif');
+            //alert('Tipo de archivo no válido. Tipos permitidos: jpg, jpeg, png o gif');
+            $('#divErrorImagen').text('Tipo de archivo no válido. Tipos permitidos: jpg, jpeg, png o gif');
         }
 
         if ( !this.validateSize( file ) ) {
             $('#alertSound')[0].play();
             this.deleteImgs();
-            alert('El tamaño del archivo debe ser menor a 1Mb');
+            //alert('El tamaño del archivo debe ser menor a 1Mb');
+            $('#divErrorImagen').text('El tamaño del archivo debe ser menor a 1Mb');
         }
 
         if ( this.validateSize( file ) ) {

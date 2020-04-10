@@ -1,0 +1,684 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Preguntas Frecuentes en Arbitraje section -->
+	<section class="about-section spad pt-0">
+		<div class="container">
+			<div class="section-title text-center">
+				<h3>Preguntas Frecuentes en Arbitraje</h3>
+			</div>
+            <div class="row">
+				<div class="col-lg-10 about-text">
+                    <p>En esta sección Usted podrá encontrar muchas de las preguntas o consultas que habitualmente nos llegan al Instituto o a las Cátedras sobre la temática.</p>
+                    <p>
+                        <table border="1" cellspacing="2" cellpadding="5" style="font-family: 'Rubik', sans-serif;">
+                          <tr>
+                            <th style="background-color:LightGrey">Nº</th>
+                            <th style="background-color:LightGrey">Tipo</th>
+                            <th style="background-color:LightGrey">Descripción</th>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">1</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Qué valor tiene una decisión (laudo) arbitral?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">Es idéntica que una decisión (fallo) judicial. En la Argentina si en el compromiso arbitral no se indico su inapelabilidad es recurrible ante la segunda instancia judicial, pero sí se convino como inapelable, no es recurrible por lo que es una definición definitiva.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">2</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Qué diferencia sustancial existe entre arbitraje y mediación?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">Qué en la mediación los participantes son quienes toman la decisión de acordar en el arbitraje la decisión la toma el árbitro.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">3</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Cómo los participantes llegan a un arbitraje?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">Básicamente de tres formas: a) por establecerlo la Ley; b) por existir una cláusula compromisoria que obliga al arbitraje, ya sea directamente o posterior a una mediación frustrada o no cumplida; o c) por acordarlo posteriormente al conflicto.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">4</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Quién selecciona a los árbitros en el arbitraje institucional?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">En principio los participantes, pero en caso de ponerse de acuerdo se deberá recurrir sistema de selección que posea la entidad.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">5</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Qué es el arbitraje institucional?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">Es el arbitraje donde los participantes han optado por una entidad "ad hoc" para desarrollar el proceso arbitral, que se supone que tiene listas de árbitros, disposiciones de desarrollo, norma de ética, etcétera.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">6</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Son menester los asesores en el proceso de arbitraje?</td>
+                          </tr>
+                          <tr¿>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">No son obligatorios, aunque pueden ser necesarios, según la temática que se aborde.</td>
+                          </tr>
+                          <tr¿>
+                            <td width="5%" rowspan="2">7</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Qué es arbitraje de derecho?</td>
+                          </tr>
+                          <tr¿>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">El arbitraje cuya decisión debe estar fundada y de acuerdo al derecho o la jurisprudencia.</td>
+                          </tr>
+                          <tr¿>
+                            <td width="5%" rowspan="2">8</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Qué es arbitraje de amigable composición?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">El arbitraje cuya decisión es de acuerdo al leal saber y entender del árbitro y donde la misma no necesita estar fundamentada.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">9</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Qué es Arb/Med?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">Se trata de un arbitraje que es sucedido por una mediación.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">10</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Cuántos árbitros son necesarios?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">La cantidad debe estar definida por los participantes, pero sí los mismos se ponene de acuerdo o aceptan la designación institucional el árbitro puede ser uno único, lo que acota los costos del proceso.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">11</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿El árbitro debe ser especialista en la temática del conflicto?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">Esto es sumamente importante por la economía del proceso dado que el mismo ya está en la temática y solvencia en el asunto.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">12</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Qué responsabilidades tiene el árbitro?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">Laudar en término, la decisión debe tratar todos y cada uno de los puntos sometidos al arbitraje. Sí es arbitraje de derecho además debe seguir la Ley o la Jurisprudencia y fundar su laudo.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">13</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Cuando una situación no se resuelve en Negociación y Mediación ¿qué otras alternativas posee?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">Resolverla en Arbitraje o Juicio.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">14</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Podemos impedir que una causa resuelta por árbitros vaya posteriormente a juicio?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">Podemos impedirla si en la cláusula composisoria establecemos que se resolverá por "Arbitraje Inapelable".</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">15</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Podemos comparar la duración temporal que se les asigna generalmente a los distintos procesos de administración de conflictos?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">
+                        		<ul class="about-list" style="margin-left:20px">
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Las negociaciones suelen durar horas.
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Las mediaciones días.
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Los arbitrajes meses.
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Los juicios años.
+                        		    </li>
+                        		</ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">16</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Qué significa "Cláusula Compromisoria en Terciación"?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">Ante cualquier conflicto derivado o relacionado con la celebración de cualquier tipo de contrato o convenio los participantes incorporan el compromiso de terciación: mediación sucedida de arbitraje apelable o inapelable.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">17</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">De acuerdo a su composición ¿cuáles son las formas de desarrollar un arbitraje?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">Por medio de un tribunal , por lo general conformado por tres árbitros o unipersonal.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">18</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Cuáles son los tipos de Arbitraje más característicos?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">Según la forma de laudar:
+                        		<ul class="about-list" style="margin-left:20px">
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Ajustado a derecho o
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				De equidad, ajustado al leal saber y entender de los árbitros
+                        		    </li>
+                        		</ul>
+                        		<br>
+                        		Según la persona responsable:
+                        		<ul class="about-list" style="margin-left:20px">
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Institucional, donde existe una entidad arbitral administradora
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				"Ad hoc"
+                        		    </li>
+                        		</ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">19</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Se pueden caracterizar los tipos de arbitraje más comunes?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">
+                        		<ul class="about-list" style="margin-left:20px">
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				El ajustado a derecho debe fundar su resolución en las normas y jurisprudencia vigentes, y debe estar fundada su resolución.
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				El de amigable composición o equidad es aplicado en situaciones de confianza donde no hace falta aplicar las normas jurídicas o la jurisprudencia, o donde son cuestiones comerciales o técnicas que exceden al derecho. y también en los asuntos internacionales donde no existe un derecho positivo.
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				En institucional está basado en el tipo de la norma que establece la entidad que desarrolla el proceso arbitral.
+                        		    </li>
+                        		</ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">20</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Qué formas de designación son las más usuales?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">
+                        		<ul class="about-list" style="margin-left:20px">
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Por sorteo directo.
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Elección por cada participante.
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Provisión de una lista de árbitro, eligiendo la cantidad deseada por eliminación.
+                        		    </li>
+                        		</ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">21</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿Qué es el Laudo?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">Es el fallo o sentencia del arbitraje, sobre todas las pretensiones sometidas a la decisión del ámbito dentro del plazo fijado en el compromiso arbitral, con las prórrogas que convengan los interesados.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">22</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿A qué se refiere el Compromiso Arbitral?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">Es el pacto compromisorio para acudir a arbitraje que debe contener: <ul class="about-list" style="margin-left:20px">
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Fecha, nombre y domicilio de los disputantes.
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Nombre y domicilio de los árbitros.
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Cuestiones sometidas al juicio arbitral.
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Multa en caso de incumplimiento.
+                        		    </li>
+                        		</ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">23</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿Cuáles son los beneficios del arbitraje?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">
+                        		<ul class="about-list" style="margin-left:20px">
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Celeridad
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Árbitros especialistas en la temática
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Conocimiento previo de costos del proceso
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Reserva
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Respaldo Institucional
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Simplicidad del trámite
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Confidencialidad
+                        		    </li>
+                        		</ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">24</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿Es menester la asistencia letrada?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">No, necesariamente.</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">25</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿Es apelable la sentencia arbitral?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">No, sí se pacto como inapelable, si se trata de arbitraje de equidad o que en el arbitraje institucional sea de equidad o se especifique su irrecurribilidad.<br><br>Y de no ser así es apelable en tribunales de segunda instancia (Cámaras de Apelaciones).</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">26</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿Qué es un título ejecutorio?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">Se considera Título Ejecutorio aquello que puede ser directamente Ejecutable Judicialmente.
+                        		Vale decir donde se aplica el procedimiento de Ejecución de Sentencia.
+                        		Por ende se trata de Resolución Firme. Equivalen sentencias no recurribles.
+                        		Ejemplos habituales:
+                        		<ul class="about-list" style="margin-left:20px">
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Sentencias judiciales firmes.
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Laudos arbitrales firmes o irrecurribles.
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Acuerdo en Mediación Prejudicial (Leyes 26.589 y 24.635).
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Ley de ejecuciones hipotecarias (Ley 24.441).
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				Acuerdos o cláusulas compromisorias&nbsp; en Mediación o Conciliación cuando se establece trato de "Cosa Juzgada" o cuando en el reglamento Institucional así se establece.
+                        		    </li>
+                        		</ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">27</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿Existen Tribunales Arbitrales Internacionales Mercantiles?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">Si, existen varias entidades que dentro de sus áreas tienen Tribunales Arbitrales Internacionales Mercantiles, tal como lo desarrolla el IANCA, entre ellas tenemos:
+                                <br><br>
+                                <b>CCI - CÁMARA DE COMERCIO INTERNACIONAL (en inglés ICC)</b><br>
+                                Corte Internacional de Arbitraje<br>
+                                38 cours Albert 1er 75008 París, Francia
+                                <ul class="about-list" style="margin-left:20px">
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Teléfono: (33-1) 4953-2905 - Fax: (33-1) 4953-2933
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Email: arb@iccwbo.org
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Web: www.iccwbo.org/policy/arbitration/
+                                	</li>
+                                </ul>
+                                <br>
+                                <b>AAA - ASOCIACIÓN AMERICANA DE ARBITRAJE (En inglés American Arbitration Assotiation)</b><br>
+                                Centro Internacional de Solución de Controversias<br>
+                                1633 Broadway, 10th Floor<br>
+                                New York, New York 10019 - Estados Unidos de Ámerica.
+                                <ul class="about-list" style="margin-left:20px">
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Teléfono: (1-800) 778-7879
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Email: ecenter@adr.org
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Web: www.adr.org/arb_med
+                                	</li>
+                                </ul>
+                                <br>
+                                <b>CORTE DE ARBITRAJE INTERNACIONAL DE LONDRES</b><br>
+                                70 Fleet Street<br>
+                                LCIA - Corte de Arbitraje Internacional de Londres
+                                <ul class="about-list" style="margin-left:20px">
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Teléfono: (44-0-20) 7936-7007
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Fax: (44-0-20) 7936-7008
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Email: lcia@lcia.org
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Web: www.lcia.org/Dispute_Resolution_Services/LCIA_Arbitration.aspx
+                                	</li>
+                                </ul>
+                                <br>
+                                <b>CORTE DE ARBITRAJE DE LA CÁMARA OFICIAL DE COMERCIO E INDUSTRIA DE MADRID</b><br>
+                                C/ Ribera del Loira 56-58<br>
+                                28042 Madrid - España
+                                <ul class="about-list" style="margin-left:20px">
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Teléfono: (91) 538-3585 - Fax: (91) 538-3689
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Email: cortearbitraje@camaramadrid.es
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Web: www.camaramadrid.es/index.php
+                                	</li>
+                                </ul>
+                                <br>
+                                <b>CIMA - CORTE CIVIL Y MERCANTIL DE ARBITRAJE</b><br>
+                                C/ Hermosilla, 8 - 2º dcha. 28001 Madrid
+                                <ul class="about-list" style="margin-left:20px">
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Teléfono: (91) 431 76 90 - Fax: (91) 431 61 38
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Email: cima@cima-arbitraje.com
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Web: www.cimaarbitraje.com
+                                	</li>
+                                </ul>
+                                <br>
+                                <b>IANCA - Instituto Argentino de Negociación, Conciliación y Arbitraje</b><br>
+                                Fragata Presidente Sarmiento 46
+                                (1406) Ciudad de Buenos Aires
+                                <ul class="about-list" style="margin-left:20px">
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Teléfono: (5411)20541499 - Fax: (5411) 20541499
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Email: info@ianca.com.ar
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Web: www.ianca.com.ar
+                                	</li>
+                                </ul>
+                                <br>
+                                <b>cidecomer - CÁMARA INTERnacional de comercio del mercosur</b><br>
+                                Carlos Quijano 1.290 Oficina 101
+                                (11000) Montevideo
+                                <ul class="about-list" style="margin-left:20px">
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Teléfono: +598 2902 2984 Ext 613
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Email: info@cidecomer.com.uy
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Web: www.cidecomer.com.uy
+                                	</li>
+                                </ul>
+                                <br>
+                                <b>CORTE ESPAÑOLA DE ARBITRAJE</b><br>
+                                C/ Ribera del Loira, 12<br>
+                                28042 Madrid España
+                                <ul class="about-list" style="margin-left:20px">
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Teléfono: + 34 91.590.69.00
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Email: arbitraje@cscamaras.es
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Web: www.corteespanolaarbitraje.es
+                                	</li>
+                                </ul>
+                                <br>
+                                <b>CIADI - CENTRO INTERNACIONAL DE ARREGLO DE DIFERENCIAS RELATIVAS A INVERSIONES</b><br>
+                                1818 H Street, N.W.<br>
+                                MSN U3-301<br>
+                                Washington, D.C. 20433 - Estados Unidos de América
+                                <ul class="about-list" style="margin-left:20px">
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Teléfono: (202) 458-1534 - Fax (202) 522-2615
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Email: ICSIDsecretariat@worldbank.org
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Web: icsid.worldbank.org/ICSID/Index.jsp
+                                	</li>
+                                </ul>
+                                <br>
+                                <b>CNUDMI - COMISIÓN DE LAS NACIONES UNIDAS PARA EL DERECHO MERCANTIL INTERNACIONAL (en inglés UNCITRAL)</b><br>
+                                Secretaría de la CNUDMI Centro Internacional de Viena<br>
+                                Apartado postal 500<br>
+                                A - 1400 Viena, - Austria (Europa)
+                                <ul class="about-list" style="margin-left:20px">
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Teléfono: (43-1) 26060-4060 ó 4061 - Telefax: (43-1) 26060-5813
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Email: uncitral@uncitral.org
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Web: www.uncitral.org
+                                	</li>
+                                </ul>
+                                <br>
+                                <b>CORTE PERMANENTE DE ARBITRAJE</b><br>
+                                Palacio de Paz. Carnegieplein 2. 2517 KJ La Haya. Países Bajos
+                                <ul class="about-list" style="margin-left:20px">
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Teléfono: (31 70) 302 4165 - Fax: (31 70) 302 4167
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Email: bureau@pca-cpa.org
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Web: www.pca-cpa.org/showpage.asp?pag_id=1303
+                                	</li>
+                                </ul>
+                                <br>
+                                <b>Asociación europea de arbitraje</b><br>
+                                Campomar 18 3º 	Madrid 280004 España
+                                <ul class="about-list" style="margin-left:20px">
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Teléfono: (+34) 91 432 2800 - Fax: (+34) 91 431 9510
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Email: consultas@aeade.org
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Web: www.aeade.org
+                                	</li>
+                                </ul>
+                                <br>
+                                <b>THE LONDON COURT OF INTERNATIONAL ARBITRATION</b><br>
+                                70 Fleet Street - London - EC4Y 1EU - United Kingdom
+                                <ul class="about-list" style="margin-left:20px">
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Teléfono: (+44) (0) 2079366200 - Fax: (+34) (0) 2279366211
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Email: lcia@lcia.org
+                                	</li>
+                                	<li>
+                                		<i class="fa fa-check-square-o"></i>
+                                		Web: www.lcia.org
+                                	</li>
+                                </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">28</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿Qué recursos existen contra una sentencia arbitral?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">En el arbitraje institucional, debe atenderse a lo que establecen las disposiciones de la entidad arbitral, por lo que en el caso del IANCA, se establece que los fallos arbitrales son inapelables y otros recursos posibles de dos tipos, los que se:
+                        		<ul class="about-list" style="margin-left:20px">
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				a. Resuelven el mismo Tribunal Arbitral, tales como de: Aclaratoria, Rectificación y también las cuestiones competencia y otros sobre el proceso arbitral.
+                        		    </li>
+                        		    <li>
+                        		        <i class="fa fa-check-square-o"></i>
+                        				b. Resuelven en una instancia arbitral superior, tal como sería el de apelación si está previsto y todos los demás recursos (como el de nulidad, entre otros). Para estos recursos arbitrales el IANCA deriva al ISCCA - International Supreme Council for Commercial Council.
+                        		    </li>
+                        		</ul>
+                        	</td>
+                          </tr>
+                          <tr>
+                            <td width="5%" rowspan="2">29</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿Cuál en la instancia arbitral superior?</td>
+                          </tr>
+                          <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">Dentro de los procesos arbitrales, que han sido decididos voluntariamente por los contratantes, especialmente si eligieron una institución arbitral y además se trata de casos internacionales, que han optado por el ARBITRAJE, seguramente para no acudir a ninguna JUSTICIA es elevar las actuaciones que se recurran a una instancia arbitral de nivel superior, dado que si se derivo a arbitraje no debería recurrir a la jurisdicción judicial dado que sería alterar la voluntad autonomía de los involucrados. Para estos el IANCA deriva al ISCCA - International Supreme Council for Commercial Council.<br><br>Para recurrir a la instancia judicial deben establecerlo explícitamente en la convención arbitral.<br><br>No obstante para la ejecución de sentencias arbitrales debe recurrirse a la Justicia dado el "imperium" del que carecen los sistemas arbitrales.</span></td>
+                          </tr>
+                        </table>
+                    </p>
+                </div>
+			</div>
+		</div>
+	</section>
+	<!-- Preguntas Frecuentes en Arbitraje section end-->
+{% endblock %}
