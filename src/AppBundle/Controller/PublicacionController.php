@@ -17,9 +17,15 @@ class PublicacionController extends Controller
          $publicacionRepository = $this->getDoctrine()->getRepository(Publicacion::class);
          $publicaciones = $publicacionRepository->findByActivo(1, array('obra' => 'ASC'));
 
+         foreach ($publicaciones as $key => $pub) {
+             $publicaciones[$key]->setExisteImagen(
+                 is_file($this->getParameter('publicaciones_imagenes_directory') . $pub->getImagen())
+             );
+         }
+
          return $this->render('publicacion/publicaciones.html.twig', array(
              'active_menu' => '5',
-             'ruta_imagen' => $this->getParameter('publicaciones_imagenes_directory'),
+             //'ruta_imagen' => $this->getParameter('publicaciones_imagenes_directory'),
              'publicacionesArray' => $publicaciones
          ));
      }
@@ -32,6 +38,10 @@ class PublicacionController extends Controller
           if ( $id != null ) {
               $publicacionRepository = $this->getDoctrine()->getRepository(Publicacion::class);
               $publicacion = $publicacionRepository->find($id);
+
+              $publicacion->setExisteImagen(
+                  is_file($this->getParameter('publicaciones_imagenes_directory') . $publicacion->getImagen())
+              );
 
               return $this->render('publicacion/publicacion.html.twig', array(
                   'active_menu' => '5',
