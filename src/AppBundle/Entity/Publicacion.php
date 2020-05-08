@@ -70,8 +70,14 @@ class Publicacion
      */
     private $activo;
 
+    /**
+     * @var bool
+     */
+    private $existeImagen;
+
     public function __construct() {
         $this->activo = true;
+        $this->existeImagen = false;
     }
 
     /**
@@ -250,5 +256,29 @@ class Publicacion
     public function getImagen()
     {
         return $this->imagen;
+    }
+
+    /**
+     * Set existeImagen
+     *
+     * @param boolean $existeImagen
+     *
+     * @return Publicacion
+     */
+    public function setExisteImagen($existeImagen)
+    {
+        $this->existeImagen = $existeImagen;
+
+        return $this;
+    }
+
+    /**
+     * Get existeImagen
+     *
+     * @return bool
+     */
+    public function getExisteImagen()
+    {
+        return $this->existeImagen;
     }
 }

@@ -21,7 +21,7 @@
                     <div class="col-lg-4 col-md-6 course-item">
                         <div class="course-thumb">
                             <a href="{{ path('publicacion', {'id':publicacion.id}) }}">
-                            {% if publicacion.imagen %}
+                            {% if publicacion.existeImagen and publicacion.imagen %}
                                 <img src="{{ asset('img/uploads/publicaciones_imagenes/' ~ publicacion.imagen) }}">
                             {% else %}
                                 <img src="{{ asset('img/publicacion-default.jpg') }}">

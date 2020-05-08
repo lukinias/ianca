@@ -14,7 +14,11 @@
                     <p>{{ publicacion.descripcionLarga | raw }}</p>
                 </div>
                 <div class="col-lg-6 pt-5 pt-lg-0">
-                    <img src="{{ asset('img/uploads/publicaciones_imagenes/' ~ publicacion.imagen) }}" alt="">
+                    {% if publicacion.existeImagen and publicacion.imagen %}
+                        <img src="{{ asset('img/uploads/publicaciones_imagenes/' ~ publicacion.imagen) }}">
+                    {% else %}
+                        <img src="{{ asset('img/publicacion-default.jpg') }}">
+                    {% endif %}
                 </div>
                 <a href="{{ publicacion.link }}" target="_blank">
                     <div class="site-btn center" style="margin-top:30px;">OBTENER</div>
