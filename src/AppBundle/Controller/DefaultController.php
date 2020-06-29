@@ -2,7 +2,9 @@
 
 namespace AppBundle\Controller;
 
+use Swift_TransportException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use AppBundle\Entity\Contacto;
@@ -34,24 +36,31 @@ class DefaultController extends Controller
 
             /*
             Enviamos mail de suscripción al Newsletter
-
-            $message = (new \Swift_Message('Suscripción al Newsletter - IANCA'))
-                    ->setFrom(array($this->container->getParameter('mailer_user') => 'IANCA Sender'))
-                    ->setTo($this->container->getParameter('mailer_user'))
-                    ->setBody(
-                        $this->renderView(
-                            // app/Resources/views/emails/newsletterSuscribe.html.twig
-                            'emails/newsletterSuscribe.html.twig',
-                            ['email' => $newsletter->getEmail()]
-                        ),
-                        'text/html'
-                    );
-            $mailer->send($message);
             */
+            try {
+                $message = (new \Swift_Message('Suscripción al Newsletter - IANCA'))
+                        ->setFrom(array($this->container->getParameter('mailer_user') => 'IANCA Alertas'))
+                        ->setTo($this->container->getParameter('mailer_to'))
+                        ->setBody(
+                            $this->renderView(
+                                // app/Resources/views/emails/newsletterSuscribe.html.twig
+                                'emails/newsletterSuscribe.html.twig',
+                                ['email' => $newsletter->getEmail()]
+                            ),
+                            'text/html'
+                        );
+                $mailer->send($message);
+            } catch (\Exception $e) {
+                die($e->getMessage());
+            }
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($newsletter);
-            $em->flush();
+            try {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($newsletter);
+                $em->flush();
+            } catch (\Exception $e) {
+                die($e->getMessage());
+            }
 
             $this->addFlash('success', 'Gracias por suscribirse al newsletter! Pronto recibirá novedades.');
 
@@ -79,10 +88,10 @@ class DefaultController extends Controller
 
             /*
             Enviamos mail por contacto
-
+            */
             $message = (new \Swift_Message('Contacto desde el sitio - IANCA'))
-                    ->setFrom(array($this->container->getParameter('mailer_user') => 'IANCA Sender'))
-                    ->setTo($this->container->getParameter('mailer_user'))
+                    ->setFrom(array($this->container->getParameter('mailer_user') => 'IANCA Alertas'))
+                    ->setTo($this->container->getParameter('mailer_to'))
                     ->setBody(
                         $this->renderView(
                             // app/Resources/views/emails/contacto.html.twig
@@ -95,7 +104,6 @@ class DefaultController extends Controller
                         'text/html'
                     );
             $mailer->send($message);
-            */
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($contacto);
