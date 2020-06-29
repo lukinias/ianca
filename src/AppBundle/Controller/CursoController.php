@@ -14,8 +14,12 @@ class CursoController extends Controller
      */
      public function cursosAction(Request $request)
      {
-         $cursoRepository = $this->getDoctrine()->getRepository(Curso::class);
-         $cursos = $cursoRepository->findByActivo(1, array('nombre' => 'ASC'));
+         try {
+             $cursoRepository = $this->getDoctrine()->getRepository(Curso::class);
+             $cursos = $cursoRepository->findByActivo(1, array('nombre' => 'ASC'));
+         } catch (\Exception $e) {
+             die($e->getMessage());
+         }
 
          return $this->render('curso/cursos.html.twig', array(
              'active_menu' => '2',

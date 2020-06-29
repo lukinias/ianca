@@ -63,13 +63,13 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: 'smtp'
-    host: 'smtp.gmail.com'
-    username: 'lukinias79@gmail.com'
-    password: 'taunus2.3ghia'
-    encryption: 'tls'
-    port: '587'
-    auth_mode: 'login'
+    transport: '%mailer_transport%'
+    host: '%mailer_host%'
+    username: '%mailer_user%'
+    password: '%mailer_password%'
+    encryption: '%mailer_encryption%'
+    port: '%mailer_port%'
+    #auth_mode: '%mailer_auth_mode%'
     spool: { type: memory }
 
 sensio_framework_extra:
