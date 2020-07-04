@@ -1722,6 +1722,10 @@ ol {
 	margin-bottom: 0;
 }
 
+.row ul {
+	margin-left: 40px;
+}
+
 /*------------------
 	Responsive
 ---------------------*/

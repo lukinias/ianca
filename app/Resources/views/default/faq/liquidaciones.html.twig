@@ -1,0 +1,454 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Preguntas Frecuentes en Liquidaciones, Actualizaciones e Intereses -->
+    <section class="about-section spad pt-0">
+        <div class="container">
+            <div class="row section-title">
+                <div class="col-lg-6">
+                    <h3>Preguntas Frecuentes en Liquidaciones, Actualizaciones e Intereses</h3>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{{ asset('img/numeratio.gif') }}" alt="" style="width:300px">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 about-text">
+                    <p>En esta sección Usted podrá encontrar muchas de las preguntas o consultas que habitualmente nos llegan al Instituto o a las Cátedras sobre la temática.</p>
+                    <p>
+                    <table border="1" cellspacing="2" cellpadding="5" style="font-family: 'Rubik', sans-serif;">
+                        <tr>
+                            <th style="background-color:LightGrey">Nº</th>
+                            <th style="background-color:LightGrey">Tipo</th>
+                            <th style="background-color:LightGrey">Descripción</th>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">1</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Cuál es la utilidad de la información?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">Habitualmente los involucrados y los afectados en temas con aspectos financieros y económicos desconocen la mecánica y la composición cabal de los ítems y los parámetros razonables, por ende poder disponer de información basada en fuentes fidedignas y desarrolladas científicamente son un elemento indispensable para poder analizar y tomar decisiones acertadas y ecuánimes.</td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">2</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Los cálculos son a interés simple o a interés compuesto?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                Las determinaciones que se realizan en materia judicial, salvo que se establezca expresamente lo contrario, se calcuna a interés simple, vale decir sin capitalizar los intereses ya devengados.
+                                <br><br>
+                                En las transacciones en el ámbito comercial, financiero u otros campos privados se suelen hacer operaciones a interés compuesto, donde a lapsos determinados los intereses se capitalizan y desde allí comienzan a generar nuevos intereses (esto se lo conoce con la denominación de anatocismo, y debe estar previamente pactado para poder aplicárselo, dado que está prohibido).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">3</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Cuáles son los componentes de la tasa de interés?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                En las operaciones comerciales y financieras las tasas de interés suelen contener varios componentes entremezclados y que nos claramente identificados ni cuantificados, entre los que se integran habitualmente tenemos:
+                                <ul class="about-list" style="margin-left:20px">
+                                    <li>
+                                        <i class="fa fa-check-square-o"></i>
+                                        Tasa pura de interés, que es la que realmente resarce al prestamista por no disponer de su capital. En el caso de las entidades financieras este concepto está compuesto por otros dos:
+                                        <ul class="about-list" style="margin-left:20px">
+                                            <li>
+                                                <i class="fa fa-chevron-right"></i>
+                                                el costo del dinero que emana de sus operaciones pasivas (letras, cajas de ahorro, cuentas corrientes),
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-chevron-right"></i>
+                                                el margen de resarcimiento, que se lo conoce como "spread".
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square-o"></i>
+                                        La previsión por incobrabilidad, que se lo conoce como un seguro. Este rubro debe tener un valor razonable, pues depende de la responsabilidad de la gestión de los créditos del prestamieta, de la cual el deudor no puede hacerse responsable ni este último se puede hacer cargo de sus riesgos comerciales.
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square-o"></i>
+                                        La prevención por la eventual pérdida del poder adquisitivo del dinero corriente se integra como un componente en aquellos que no tienen indexación y cuando la inflación es significativa.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">4</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Cómo se ajusta o indexa una deuda?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                Las deudas que se otorgan dentro de la economías con algún nivel de inflación suelen actualizarse con un elemento (índice de precios, divisa, precio de algún producto testigo, fórmula de ajuste, etcéteraa) que tratan de preservar el poder de compra del acreedor.
+                                <br><br>
+                                En realidad esto está prohibido desde la Ley de Convertibilidad (1991), por ello las formas que se han empleado desde entonces, para resguardar el valor del dinero, han sido:
+                                <ul class="about-list" style="margin-left:20px">
+                                    <li>
+                                        <i class="fa fa-check-square-o"></i>
+                                        Convenir en una divisa fuerte, lo que no deja de ser una forma de indexación, que estaría violando la mencionada norma.
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square-o"></i>
+                                        Incluir una previsión por actualización monetaria dentro de la tasa de interés. Lo cual también es una simulación que estaría violando ficticiamente la ley citada.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">5</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Cuáles de los conceptos que conforman la tasa bruta de interés responden a costos temporales ajenos a la retribución pura?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                Los componentes están detallados en la respuesta a la pregunta 3, y en lo referido a los costos temporales:
+                                <ul class="about-list" style="margin-left:20px">
+                                    <li>
+                                        <i class="fa fa-check-square-o"></i>
+                                        La previsión por incobrabilidad es eminentemente un riesgo crediticio que está en función del tiempo y el monto de la exposición.
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square-o"></i>
+                                        La cobertura de la inflación tiene un efecto similar al anterior.
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square-o"></i>
+                                        La cobertura de la inflación tiene un efecto similar al anterior.
+                                    </li>
+                                </ul>
+                                Es decir que los tres conceptos no existirían si no existiese un importe debido o un lapso de tiempo entre la entrega y la devolución.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">6</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Cuál es el principio de eqidad?</td>
+                        </tr>
+                        <tr>
+                        <td width="10%">Respuesta</td>
+                        <td width="85%">
+                            La equidad en los aspectos financieros está centrada fundamentalmente en la razonabilidad de los ítems -en cuanto a su magnitud y procedencia- y de la manera en que se los determina.
+                            <br><br>
+                            Los conceptos deben responder a servicios y/o productos verdaderamente brindados o al menos puestos a disposición.
+                            <br><br>
+                            Una forma de ser ecuánimes es brindando adecuada información y  explicaciones a los neótitos para así evitar que los idóneos o expertos se aprovechen del desconocimiento o desinformación de alguno de los partícipes.
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="5%" rowspan="2">7</td>
+                        <td width="10%">Pregunta</td>
+                        <td width="85%">¿Quiénes son los usuarios de este tipo de servicios?</td>
+                        </tr>
+                        <tr>
+                        <td width="10%">Respuesta</td>
+                        <td width="85%">
+                            El espectro de organizaciones, reparticiones o personas que pueden emplear este servicio es sumamente amplio, pero los usuarios habituales son:
+                            <ul class="about-list" style="margin-left:20px">
+                                <li>
+                                    <i class="fa fa-check-square-o"></i>
+                                    Profesionales de distintas disciplinas, donde los abogados tienen una gran demanda dado que este servicio brinda información y determinaciones de gran utilidad para hacer y contestar demandas, para practicar liquidaciones en los momentos de sentencias, ejecuciones, para realizar o controlar rendiciones de cuentas, para evaluar la razonabilidad de una acción, para tener una base adecuada en la negociación, mediación y/o conciliación, entre otras cuestiones.
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-square-o"></i>
+                                    Las empresas, los organismos públicos, los sindicatos que necesitan determinar los valores de desvinculaciones (voluntarias, justificadas e injustificadas).
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-square-o"></i>
+                                    Los deudores y los acreedores.
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-square-o"></i>
+                                    Los Administradores de Consorcios o los Consorcistas.
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-square-o"></i>
+                                    Los funcionarios judiciales que requieran controlar o desarrollar liquidaciones.
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-square-o"></i>
+                                    Los peritos judiciales.
+                                </li>
+                            </ul>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="5%" rowspan="2">8</td>
+                        <td width="10%">Pregunta</td>
+                        <td width="85%">¿Qué es anatocismo?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                El anatocismo es la capitalización periódica de los intereses devengados por un préstamo, y desde el momento en que se integran al capital, forman parte de éste y por ende también comienzan a generar intereses.
+                                <br><br>
+                                Para que se puedan cargar interese sobre intereses es menester que los mismos estén previamente pactas entre prestatario y prestamista, dado que en caso de no estarlo están prohibidos legalmente.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">9</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Qué es ratioferusismo?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                Se trata de la determinación excesiva de los intereses, penalizaciones, liquidaciones, que se practican.
+                                <br><br>
+                                Por lo que una determinación excesiva puede hacer abusiva un costo financiero aparentemente razonable.
+                                <br><br>
+                                Por lo que usura no es solamente el valor del interés sino también la forma en que se practican los cálculos, que en ocasiones son más gravosos que las tasas elevadas.
+                                <br><br>
+                                Son típicos ejemplos de ratiferusismo los créditos en cuotas de los sistemas de amortización directo y algunos de los Argentinos.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">10</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Desde cuando se devengan los ítems de una liquidación?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                Cada item debe devengarse desde el momento en que el que debía cumplir con una obligación hasta el momento en que la misma se cancela.
+                                <br><br>
+                                A modo de ilustración; en una liquidaciones por desvinculación laboral si se deben algunos conceptos al momento de practicarse la liquidación de terminación de la relación de dependencia existe un lapso entre el día de culminación y el instante en que debería haberse pagado. Por ejemplo un aguinaldo no pagado hace 6 meses debería considerarse ese tiempo para cargar intereses.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">11</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿El IVA (Impuesto al Valor Agregado corresponde sobre los intereses?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                En realidad la norma dispone que se graven los intereses sin distinguir como están compuestos. Las alícutas son distintas según el tipo de operaciones.
+                                <br><br>
+                                En realidad cuando los intereses brutos contienen una previsión por inflación se estaría cobrando un impuesto a la pérdida del poder adquisitivo del dinero, que muy por el contrario no es ningún valor agregado, Además al gravarse el interés a su vez es un generador de inflación.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">12</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Por qué en los anticipos de la cancelación de un préstamo se calcula el valor actual neto (VAN)?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                El valor actual neto tiene el mismo concepto del interés, es decir un importe de dinero dado por un tiempo debe tener una retribución, por ende cuando se adelanta el pago no está durante todo el tiempo por ende debe descontarse.
+                                <br><br>
+                                Esto es razonable dado que al anticipar algo que debía pagarse con posterioridad existe en el acreedor costos disminuidos (incobrabilidad, inflación) y hay una gananacia en el interés puro.
+                                <br><br>
+                                La inflación y la incobrabilidad (u otros riesgos que dejan de correrse) deben de deducirse plenamente y para el interés puro.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">13</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Qué es lo que debe considerarse al liquidar la mora en los pagos de créditos?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                La mora sucede solamente sobre la parte del crédito (capital más intereses) que está vencida e impaga, y debe de considerarse que el resto de la deuda no está vencido.
+                                <br><br>
+                                El aplicar la determinación sobre del préstamo implicaría que se estaría duplicando los intereses por la parte no vencida, por lo que una vez puesto al día debería descontarse sobre los próximos vencimientos.
+                                <br><br>
+                                De manera que determinarlo sobre saldos no vencidos es un exceso incausado.
+                                <br><br>
+                                Lo que corresponde pagar es por la cifra neta -capital e intereses vencidos- que está en mora y por el tiempo que perdure la misma.
+                                <br><br>
+                                La mora es un resarcimiento que determina por anticipado el daño que se le causa al acreedor, y que habitualmente es la tasa de interés (debería ser la pura) que se pondera por un factor. En verdad este factor no debería sobre los componentes inflacionarios, de incobrabilidad u otros costos comprendidos en la tasa bruta, dado que ello implicaría determinarlo sobre ítems que causan más daño que el de ellos mismos. Por ende se debe aplicar toda la tasa bruta sobre todo lo vencido por el lapso de la mora y solamente debería considerarse sobre la tasa pura el factor para así avitar duplicaciones de conceptos que no corresponden.
+                                <br><br>
+                                Esto resulta muy claro cuando no se tiene inflación (o el capital está indexado), dado que si determina sobre la pérdida del poder adquisitivo se estaría dando un trato diferente e injusto a los deudores, en beneficio sin causa para el acreedor,
+                                <br><br>
+                                Determinar la mora sobre las previsiones -que el realidad son seguros- sería lo mismo que cobrar la mora sobre los otros seguros explícitos (vida, desocupación, incendio, etcétera), lo que es absurdo e inequitativo.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">14</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Corresponde determinar la incobrabilidad en todos los préstamos?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                No, pues aquellos que tienen garantías reales (hipoteca, prenda) o seguros de caución el acreedor no estaría corriendo riesgo de cobrabilidad, por ende no corresponde aplicarlo.
+                                <br><br>
+                                Por otro lado, si los avales o garantías dan un respaldo muy amplio y seguro podrían no ser necesario o la proporción del riesgo sería muy reducida pues la posibilidad de incobrabilidad sería muy pequeña.
+                                <br><br>
+                                En la organizaciones comerciales que poseen potenciales activos para la cancelación de sus deudas (normalmente inversiones extraoperativas o sobre inversión en activos) también deben ser considerados para morigerar la proporción de incobrabilidad.
+                                <br><br>
+                                Por ende la incobrabilidad cabe en aquellos préstamos sin garantía y por la dimensión del riesgo soportado.
+                                <br><br>
+                                Si el acreedor da sus créditos indiscriminadamente o si tiene una deficiente gestión de administración y cobranzas es su responsabilidad, por lo que entendemos que el deudor no puede hacerse cargo de ello, por lo tanto el porcentual del riesgo debe estar limitado a un valor razonable.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">15</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Si se paga parcialmente un vencimiento crédito o una cuota, cómo debería computarse el pago?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">
+                                Lo primero que debe cubrirse son los intereses vencidos y luego aplicarse el resto al capital vencido.
+                                <br><br>
+                                Obviamente la parte vencida y no saldada del capital debería seguir generando intereses hasta tanto se pague.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">16</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Por qué se indexan, actualizan o ajustan las deudas en dinero?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                Básicamente para mantener el poder de compra del acreedor. Vale decir para que el deudor, supuestamente con el mismo esfuerzo debería abonar una adecuación que mantenga el mismo valor del dinero.
+                                <br><br>
+                                De alguna manera es más adecuado indexar que incluir una previsión en la tasa de interés, que puede resultar excesiva o escaza, por ende podría beneficiarse el acreedor en el primer caso y el deudor en el segundo.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">17</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Cuál es el índice o el indicador más adecuada para las actualizaciones?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                Los indicadores son apreciaciones globales, dado que en verdad los aumentos de precio que soporta una persona u organización depende de donde gasta o invierte su dinero.
+                                <br><br>
+                                Los indicadores (índices, entre otros) tienen algún sesgo diferencial. por ello para las operaciones comerciales en general el Índice de Precios Mayoristas debería ser el más representativo, para las personas el índice más apropiado es el de Precios al Consumidor. Si se trata de la Construcción el Ïndice de Precios de la Construcción es adecuado. En los casos que el insumo sea en gran medida importado será razonable usar alguna divisa representativa.
+                                <br><br>
+                                La mejor manera de ajustar es aplicando esquemas de ajuste que contemple la ecuación de costos de la organización.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">18</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Es justo indexar deudas o liquidar un interés que tenga contenido inflacionario?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">
+                                Desde el punto de vista del deudor es razonable. Para el caso del acreedor debe evaluarse si el mismo soporta el efecto de la inflación, pues de no ser así estaría cobrando un sobreprecio. En realidad las entidades financieras aplican la inflación a sus deudores pero no la pagan a sus depositantes e inversores, por ende se hacen de una ganancia incausada.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">19</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Es posible descomponer la tasa bruta de interés?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">
+                                La tasa bruta de interés está generalmente formada por los componentes que ya analizáramos en las respuestas precedentes.
+                                <br><br>
+                                La cuestión básica está centrada en poder determinar la magnitud de cada uno de sus componentes. Esto es bastante simple en cuanto al dimensionamiento de la inflñación dado que se trata de una dato de acceso absolutamente público y suministrado por un organismo oficial. Vale decir su dimensión es perfectamente calculable.
+                                <br><br>
+                                En cuanto a la previsión por incobrabilidad, se trata de un dato disponible ya que la información de las entidades financieras se encuentran publicados en "Internet" (Por ejemplo: BCRA).
+                                <br><br>
+                                No obstante este concepto no debería superar el máximo de 2% anual, dado que desde allí habría una marcada ineficiencia por parte del acreedor y que no es responsabilidad del deudor.
+                                <br><br>
+                                En cuanto el costo que generan las operaciones pasivas también está disponible en "Internet".
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">20</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="85%">¿Es conveniente cancelar anticipadamente un préstamo?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">
+                                Fuera de los aspectos emocionales, que siempre es una carga moral tener un crédito y abordando los aspectos económicos y financieros, en general si para ambos convinientes, pero el depende del arreglo que se llegue, puesto que si no es equilibrado y ambos sacan provecho del mismo no convendrá.
+                                <br><br>
+                                Si el acreedor pretende obtener todo el ingreso, incluso los previsto por inflación e incobrabilidad, como sería no practicando descuento alguno al deudor le conviene colocar esa disponibilidad de dinero por el lapso dado que de esa forma obtendrá algún rédito, y así optimizará la operación.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">21</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿Qué es realmente el interés?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">
+                                En su concepto puro es la retribución o compensación que recibe el prestamista por dejar de disponer de su dinero por un lapso. Esto es razonable, aunque existen alguna teorías que lo consideran inadecuado, pero en la práctica esto funciona como una alquiler del capital.
+                                <br><br>
+                                Hoy el concepto del interés está entremezclado con otros componentes que deforman su esencia, por ello el análisis debe depurarlo para llegar a conclusiones adecuadas y equilibradas.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">22</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿Cuál es el requisito para que se otorgue un crédito?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="85%">
+                                Para que un préstamo sea apropiado, para la sociedad, el acreedor debe asegurarse con que el deudor cuanta con una capacidad de ingresos potenciales futuros (vale decir su potencial de pago).
+                                <br><br>
+                                Muchos acreedores no prestan atención a esto y se concentran en los bienes colocados como garantía son suficientes para sus eventual enajenación. Es decir que el prestamista asegura su cobro, pero no le interesa si el créditos es bien aplicado o si las futuras retribuciones del deudor son adecuadas para enfrentar esa cancelación de manera regular. Esto último es una irresponsabilidad social y económica dado que habitualmente causa perjuicios que finalmente encarece la financiación.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">23</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿Ta tasa de interés en moneda corrientes y en una divisa estable debe ser similar?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">
+                                Si la moneda corriente está indexada la tasa de interés debe ser aún menor que la divisa (por más fuerte que se considere a la misma) dado que esta última puede tener aunque sea una mínima inflación mientras que la moneda corriente ajustada o en una moneda de poder adquisitivo constante (Tal como lo es el Módulo Monetario) va adecuándose a la pérdida del poder adquisitivo.
+                                <br><br>
+                                Si el crédito se trata en moneda corriente, pero con actualización a través de un componentes dentro del interés bruto el límite estará en la expectativa de inflación.
+                                <br><br>
+                                El riesgo de incobrabilidad es similar en ambos casos.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">24</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿Hay comisiones o gastos conexas al préstamo?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">
+                                Para que una comisión o gasto se justifique debe corresponder a un servicio efectivamente brindado y debería implicar algún esfuerzo o tarea no habitual. También su magnitud debe estar en consonancia con el sacrificio del que lo efectúe y no con el importe de la operación.
+                                <br><br>
+                                Una pregunta fundamental para comprender esto es ¿Qué pensaríamos si en cualquier transacción comercial al terminarse ésta nos piden algo de dinero por hacerlos la factura y otro poco más por cobrarnos? La respuesta parece obvia y contundente: "Sería un abuso".
+                                <br><br>
+                                Es razonable una comisión sobre cuestiones no normales, por ejemplo un pedido de liquidación o rendición de cuentas no comprometido como habitual.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%" rowspan="2">25</td>
+                            <td width="10%">Pregunta</td>
+                            <td width="80%">¿Qué es la tasa compensatoria o retributiva de interés?</td>
+                        </tr>
+                        <tr>
+                            <td width="10%">Respuesta</td>
+                            <td width="80%">
+                                En principio ambas son la retribución esperada por el acreedor. Es usual que muchas personas que no tienen claro o ignoran los contenidos de las tasas de interés den esta denominación a la tasa bruta de interés, pero en verdad la retributiva o compensatoria son la parte pura de la tasa de interés.
+                            </td>
+                        </tr>
+                    </table>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Preguntas Frecuentes en Liquidaciones, Actualizaciones e Intereses end-->
+{% endblock %}
