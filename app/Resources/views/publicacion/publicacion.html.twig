@@ -9,11 +9,11 @@
                 <p><u>Autores:</u> {{ publicacion.autores }}</p>
             </div>
             <div class="row">
-                <div class="col-lg-6 about-text">
+                <div class="col-lg-9 about-text">
                     <h5>Descripción</h5>
                     <p>{{ publicacion.descripcionLarga | raw }}</p>
                 </div>
-                <div class="col-lg-6 pt-5 pt-lg-0">
+                <div class="col-lg-3 pt-5 pt-lg-0">
                     {% if publicacion.existeImagen and publicacion.imagen %}
                         <img src="{{ asset('img/uploads/publicaciones_imagenes/' ~ publicacion.imagen) }}">
                     {% else %}
